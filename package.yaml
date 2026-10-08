@@ -1,0 +1,45 @@
+name: 排班调度师
+repo: bangwozuo/appointment-scheduler-zh
+legacy_name: 预约排班调度员
+version: 0.2.0
+asset_type: prompt-only
+stage: P1
+complexity: **L**（排班引擎需定制开发）
+group: 本地生活商家
+runtime_dependencies: none
+api_key_required: false
+demand_ids:
+  - D01
+  - D28
+
+workflows:
+  - name: 在线预约受理
+    id: de_local_05_wf01
+  - name: 技师与场地排班
+    id: de_local_05_wf02
+  - name: 冲突与超售检测
+    id: de_local_05_wf03
+  - name: 爽约预测与补位
+    id: de_local_05_wf04
+  - name: 排班效率周报
+    id: de_local_05_wf05
+
+skills:
+  - id: smart-scheduling-engine
+    name: 智能排班引擎
+    family: 
+  - id: booking-notify
+    name: 预约消息通知
+    family: 
+  - id: traffic-demand-forecast
+    name: 客流需求预测
+    family: 
+  - id: commission-calc-assist
+    name: 提成计算辅助
+    family: 
+
+compliance:
+  ai_label_required: true
+  human_review_required: true
+  forbidden_words_check: true
+  official_api_only: true
