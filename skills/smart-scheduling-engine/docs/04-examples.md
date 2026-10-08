@@ -40,3 +40,8 @@
 ---
 
 *本示例由实跑验证生成，verdict: pass*
+
+
+## 真实实跑记录（runs_v2）
+
+本资产已在 runs_v2 完成真实实跑：输入见 `examples/input.json`（runs_v2 同源回填），输出摘要见 `runs_v2/appointment-scheduler-zh/skills/smart-scheduling-engine/output.md`。脚本实跑产物见资产 `out/` 目录。
