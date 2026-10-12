@@ -110,22 +110,22 @@ appointment-scheduler-zh/
 
 ## 技能清单（4 个）
 
-| # | 技能 | 能力族 | 复杂度 | 提示词 | 文档 |
-|---|------|--------|--------|--------|------|
-| 1 | 智能排班引擎 | 排期与调度 | `L` | [prompt.txt](skills/smart-scheduling-engine/prompt.txt) | [docs](skills/smart-scheduling-engine/docs/) |
-| 2 | 预约消息通知 | 排期与调度 | `M` | [prompt.txt](skills/booking-notify/prompt.txt) | [docs](skills/booking-notify/docs/) |
-| 3 | 客流需求预测 | 趋势预测 | `M` | [prompt.txt](skills/traffic-demand-forecast/prompt.txt) | [docs](skills/traffic-demand-forecast/docs/) |
-| 4 | 提成计算辅助 | 测算与评估 | `S` | [prompt.txt](skills/commission-calc-assist/prompt.txt) | [docs](skills/commission-calc-assist/docs/) |
+| # | 技能 | 能力族 | 复杂度 | 说明文档 |
+|---|------|--------|--------|----------|
+| 1 | 智能排班引擎 | 排期与调度 | `L` | [README](skills/smart-scheduling-engine/README.md) |
+| 2 | 预约消息通知 | 排期与调度 | `M` | [README](skills/booking-notify/README.md) |
+| 3 | 客流需求预测 | 趋势预测 | `M` | [README](skills/traffic-demand-forecast/README.md) |
+| 4 | 提成计算辅助 | 测算与评估 | `S` | [README](skills/commission-calc-assist/README.md) |
 
 ## 工作流清单（5 条）
 
-| # | 工作流 | 阶段 | 复杂度 | 触发 | 定义 | 文档 |
-|---|--------|------|--------|------|------|------|
-| 1 | 在线预约受理 | `P1` | `M` | 事件（客户微信/小程序发起） | [SKILL.md](workflows/online-booking-intake-flow/SKILL.md) | [docs](workflows/online-booking-intake-flow/docs/) |
-| 2 | 技师与场地排班 | `P1` | `M` | 定时（每日 6:30） | [SKILL.md](workflows/staff-room-scheduling-flow/SKILL.md) | [docs](workflows/staff-room-scheduling-flow/docs/) |
-| 3 | 冲突与超售检测 | `P1` | `S` | 事件（新预约写入） | [SKILL.md](workflows/conflict-oversell-detect-flow/SKILL.md) | [docs](workflows/conflict-oversell-detect-flow/docs/) |
-| 4 | 爽约预测与补位 | `P1` | `L` | 定时（每日两次扫描） | [SKILL.md](workflows/no-show-predict-backfill-flow/SKILL.md) | [docs](workflows/no-show-predict-backfill-flow/docs/) |
-| 5 | 排班效率周报 | `P2` | `S` | 定时（每周一） | [SKILL.md](workflows/scheduling-efficiency-weekly-flow/SKILL.md) | [docs](workflows/scheduling-efficiency-weekly-flow/docs/) |
+| # | 工作流 | 阶段 | 复杂度 | 触发 | 说明文档 |
+|---|--------|------|--------|------|----------|
+| 1 | 在线预约受理 | `P1` | `M` | 事件（客户微信/小程序发起） | [README](workflows/online-booking-intake-flow/README.md) |
+| 2 | 技师与场地排班 | `P1` | `M` | 定时（每日 6:30） | [README](workflows/staff-room-scheduling-flow/README.md) |
+| 3 | 冲突与超售检测 | `P1` | `S` | 事件（新预约写入） | [README](workflows/conflict-oversell-detect-flow/README.md) |
+| 4 | 爽约预测与补位 | `P1` | `L` | 定时（每日两次扫描） | [README](workflows/no-show-predict-backfill-flow/README.md) |
+| 5 | 排班效率周报 | `P2` | `S` | 定时（每周一） | [README](workflows/scheduling-efficiency-weekly-flow/README.md) |
 
 ---
 
