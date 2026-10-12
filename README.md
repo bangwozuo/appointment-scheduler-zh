@@ -4,8 +4,7 @@
 
 ![排班调度师 · 动态演示](docs/assets/hero.gif)
 
-*▲ 实时演示（自动循环）· [▶ 观看完整版合集视频](docs/demo.mp4)*
-
+*▲ 真实执行录播（自动循环播放）· [▶ 观看完整版合集视频](docs/demo.mp4)*
 
 [![Stage](https://img.shields.io/badge/stage-P1-orange)](https://github.com/bangwozuo)
 [![Asset](https://img.shields.io/badge/asset-prompt--only-blueviolet)](#资产形态)
@@ -113,10 +112,10 @@ appointment-scheduler-zh/
 
 | # | 技能 | 能力族 | 复杂度 | 提示词 | 文档 |
 |---|------|--------|--------|--------|------|
-| 1 | 智能排班引擎 | 排期调度 | `L` | [prompt.txt](skills/smart-scheduling-engine/prompt.txt) | [docs](skills/smart-scheduling-engine/docs/) |
-| 2 | 预约消息通知 | 排期调度 | `M` | [prompt.txt](skills/booking-notify/prompt.txt) | [docs](skills/booking-notify/docs/) |
-| 3 | 客流需求预测 | — | `M` | [prompt.txt](skills/traffic-demand-forecast/prompt.txt) | [docs](skills/traffic-demand-forecast/docs/) |
-| 4 | 提成计算辅助 | 测算评估 | `S` | [prompt.txt](skills/commission-calc-assist/prompt.txt) | [docs](skills/commission-calc-assist/docs/) |
+| 1 | 智能排班引擎 | 排期与调度 | `L` | [prompt.txt](skills/smart-scheduling-engine/prompt.txt) | [docs](skills/smart-scheduling-engine/docs/) |
+| 2 | 预约消息通知 | 排期与调度 | `M` | [prompt.txt](skills/booking-notify/prompt.txt) | [docs](skills/booking-notify/docs/) |
+| 3 | 客流需求预测 | 趋势预测 | `M` | [prompt.txt](skills/traffic-demand-forecast/prompt.txt) | [docs](skills/traffic-demand-forecast/docs/) |
+| 4 | 提成计算辅助 | 测算与评估 | `S` | [prompt.txt](skills/commission-calc-assist/prompt.txt) | [docs](skills/commission-calc-assist/docs/) |
 
 ## 工作流清单（5 条）
 
