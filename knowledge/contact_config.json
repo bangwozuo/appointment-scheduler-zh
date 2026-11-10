@@ -1,0 +1,46 @@
+{
+  "key": "contact_config",
+  "title": "客户授权触达与执行配置",
+  "kind": "template",
+  "supply": "customer_configuration",
+  "consumers": [
+    "d4",
+    "d9",
+    "d11"
+  ],
+  "content_requirements": [
+    "由本门店提供授权范围内客户标识、脱敏联系方式、关注及渠道资格、老客次卡分群、当日已触达次数、改期取消入口、老板确认和前台执行记录。",
+    "通过授权客户系统导出取得，不用示例名单替代真实名单，不跨门店挪用。"
+  ],
+  "evidence": {
+    "source_key": "d11",
+    "quote": "经营数据含门店商业信息，不对外披露；客户名单按授权范围使用"
+  },
+  "id": "appointment-scheduler-zh:knowledge:contact_config",
+  "normalized_kind": "template",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "客户授权触达与执行配置",
+    "kind": "template",
+    "actual_source_context": [
+      "- 本工作流输出为 **AI 辅助周报**，促销方案发布前必须经老板人工确认\n- 经营数据含门店商业信息，不对外披露；客户名单按授权范围使用\n- 请按所在平台要求完成 AI 生成内容标识"
+    ],
+    "required_business_fields": [
+      "由本门店提供授权范围内客户标识、脱敏联系方式、关注及渠道资格、老客次卡分群、当日已触达次数、改期取消入口、老板确认和前台执行记录。",
+      "通过授权客户系统导出取得，不用示例名单替代真实名单，不跨门店挪用。"
+    ],
+    "consumers": [
+      "d4",
+      "d9",
+      "d11"
+    ],
+    "supply": "customer_configuration",
+    "epistemic_state": "source_bound_conditional_template",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

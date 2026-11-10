@@ -1,0 +1,168 @@
+{
+  "id": "skill-traffic-demand-forecast",
+  "name": "客流预测",
+  "version": "0.3.0-rc.1",
+  "kind": "generic",
+  "purpose": "保留7天需求预测工具与解释技能，供周报及爽约流程使用，不将客流预测等同个人爽约评分。",
+  "conditions": [
+    "绑定d7完整原文；确定性脚本及运行证据待补，历史少于7天拒绝外推；+3%仅为原文缺省假设。"
+  ],
+  "acceptance": [
+    "保留forecast、basis、uncertainty及三sheet预测表、区间图、JSON；逐星期均值、趋势系数与±15%区间可追溯，解释节假日及其他外生冲击，不称统计置信区间。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:forecast_method",
+    "appointment-scheduler-zh:knowledge:history_config"
+  ],
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "skills/traffic-demand-forecast/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "0ed3b80981dc47cc29c5d76b55a57ba0e324860f8863c02745335f3b4e02ae4e"
+  },
+  "original_contract": {
+    "id": "appointment-scheduler-zh:skill:traffic-demand-forecast",
+    "original_id": "traffic-demand-forecast",
+    "version": "1.0.0",
+    "purpose": "保留7天需求预测工具与解释技能，供周报及爽约流程使用，不将客流预测等同个人爽约评分。",
+    "source": {
+      "repository": "bangwozuo/appointment-scheduler-zh",
+      "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+      "path": "skills/traffic-demand-forecast/SKILL.md",
+      "source_original": {
+        "id": "art_e067a1ba8c3e44009e13",
+        "revision": 1,
+        "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+      },
+      "content_sha256": "0ed3b80981dc47cc29c5d76b55a57ba0e324860f8863c02745335f3b4e02ae4e"
+    },
+    "source_text_sha256": "0ed3b80981dc47cc29c5d76b55a57ba0e324860f8863c02745335f3b4e02ae4e",
+    "production_form": "combination",
+    "conditions": [
+      "绑定d7完整原文；确定性脚本及运行证据待补，历史少于7天拒绝外推；+3%仅为原文缺省假设。"
+    ],
+    "acceptance": [
+      "保留forecast、basis、uncertainty及三sheet预测表、区间图、JSON；逐星期均值、趋势系数与±15%区间可追溯，解释节假日及其他外生冲击，不称统计置信区间。"
+    ],
+    "knowledge_ids": [
+      "appointment-scheduler-zh:knowledge:forecast_method",
+      "appointment-scheduler-zh:knowledge:history_config"
+    ],
+    "runtime_binding": "pending_actual_production",
+    "content_acceptance": "pending_actual_consumer_and_original_review"
+  },
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "operation": {
+        "const": "forecast"
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "operation",
+      "data"
+    ],
+    "additionalProperties": false
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "status",
+      "staff_id",
+      "operation",
+      "data_origin",
+      "files",
+      "knowledge_sources",
+      "knowledge_governance"
+    ],
+    "properties": {
+      "status": {
+        "enum": [
+          "draft",
+          "needs_input"
+        ]
+      },
+      "staff_id": {
+        "const": "appointment-scheduler-zh"
+      },
+      "operation": {
+        "enum": [
+          "smart",
+          "notify",
+          "commission",
+          "forecast",
+          "conflict",
+          "no_show",
+          "booking",
+          "weekly",
+          "scheduling"
+        ]
+      },
+      "data_origin": {
+        "const": "SYNTHETIC"
+      },
+      "files": {
+        "type": "array"
+      },
+      "knowledge_sources": {
+        "type": "array"
+      },
+      "knowledge_governance": {
+        "type": "array"
+      }
+    }
+  },
+  "execution": {
+    "type": "installed-native-workflow",
+    "operation": "forecast",
+    "service_required": true,
+    "offline_execution_claimed": false,
+    "checkpoint_authority": "existing WorkflowService",
+    "model_required": false
+  },
+  "current_binding": {
+    "source_run_id": "run_0b88b3c639514380a074",
+    "installation_id": "ins_e57d7f6c4cb4dc07a756350feb110f99",
+    "manifest_sha256": "e57d7f6c4cb4dc07a756350feb110f9966f80eaa98fc215ff2e13cccf3d0bfe0",
+    "same_original_business_proof": {
+      "operation_id": "appointment-191-s07-forecast-20261110",
+      "run_id": "run_49aa3a79045f41c7a933",
+      "review_id": "art_fbe944b45f7b43799bf1",
+      "review_revision": 2
+    },
+    "original_source_scope_only": true,
+    "public_framework_qualification_inferred": false
+  },
+  "distribution": {
+    "path": "skills/traffic-demand-forecast",
+    "client_script": "scripts/product.py",
+    "required_files": [
+      "SKILL.md",
+      "definition.json",
+      "native-schema.json",
+      "prompt.txt",
+      "scripts/product.py",
+      "references/connection.example.json",
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  "current_runtime_binding": {
+    "source_run_id": "run_105fdebe57f34f7cacab",
+    "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+    "operation": "forecast",
+    "current_DA_original": {
+      "run_id": "run_bcbd8f2417cb438b8334",
+      "review_id": "art_2e91cd07f66d40ad93bb",
+      "review_revision": 2
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "typed-asset-1.0",
+  "asset_type": "workflow",
+  "id": "appointment-scheduler-zh-shared-flow-consumers",
+  "version": "1.0.0",
+  "source_run_id": "run_03fd4854e85042ac9c8e",
+  "production_target": "deepagents",
+  "target_binding_sha256": "e2b8e62b7e083f4c071769e55b14fac21d16296fb117de6ccff7c3619c866f97",
+  "definition_sha256": "5edc46cd1d4e220f0a1b8147961b350dc1487509400852cb8fe54e00d8a24e63",
+  "required_resources": [
+    {
+      "type": "tool",
+      "id": "appointment-shared-resource-flows-191",
+      "version": "26954def63f2d61214741ce4405520eeb090c589b94f9ff1459182b1a096f5ec",
+      "permissions": [
+        "module.execute"
+      ],
+      "side_effect": "local_write",
+      "native_agent": false,
+      "node_id": "execute"
+    }
+  ],
+  "source_set_sha256": "e0d6ef359f2aa55fbdf7f430996b60aaaa49ce33f48317ed16a16ec332376656",
+  "dependency_snapshot_sha256": "699f4f2dc70c92f606c35370483fcd4fde01acd509d03f7999d45ec389317767",
+  "execution_backend": "existing_audited_WSL_bubblewrap_offline_libraries",
+  "executable_source": true
+}

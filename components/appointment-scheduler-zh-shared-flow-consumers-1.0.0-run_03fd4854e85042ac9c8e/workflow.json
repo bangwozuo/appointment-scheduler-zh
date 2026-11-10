@@ -1,0 +1,47 @@
+{
+  "name": "预约受理·排班·冲突共享能力",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "config": {}
+    },
+    {
+      "id": "execute",
+      "type": "tool",
+      "config": {
+        "resource_id": "appointment-shared-resource-flows-191",
+        "input": {
+          "operation": {
+            "$path": "input.operation"
+          },
+          "data": {
+            "$path": "input.data"
+          },
+          "data_origin": {
+            "$path": "input.data_origin"
+          }
+        }
+      }
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "config": {
+        "output_path": "results.execute"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "s",
+      "source": "start",
+      "target": "execute"
+    },
+    {
+      "id": "e",
+      "source": "execute",
+      "target": "end"
+    }
+  ]
+}

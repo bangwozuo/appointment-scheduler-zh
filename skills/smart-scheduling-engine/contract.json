@@ -1,0 +1,32 @@
+{
+  "id": "appointment-scheduler-zh:skill:smart-scheduling-engine",
+  "original_id": "smart-scheduling-engine",
+  "version": "1.0.0",
+  "purpose": "作为受理、日排班和冲突流程的共享多资源排班技能，保留设备资源与未排原因，不仅生成日历。",
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "skills/smart-scheduling-engine/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "22bc5adf9ac9ace19d2495493d140e79f0cd4bad52c951ceb3476234a4c1ae4b"
+  },
+  "source_text_sha256": "22bc5adf9ac9ace19d2495493d140e79f0cd4bad52c951ceb3476234a4c1ae4b",
+  "production_form": "combination",
+  "conditions": [
+    "绑定d6完整原文；按客户体验、负荷均衡、场地利用率的员工级优先序处理，不静默覆盖。",
+    "设备占用字段与约束算法未具体给出，需父任务补齐；改派需复检及人工确认。"
+  ],
+  "acceptance": [
+    "输入items及资源约束，输出schedule、conflicts、unscheduled和利用率；验证指名→期望时段→提交顺序、班次休息培训、15分钟缓冲、末单及房型，保留超负荷与可补单提示。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:schedule_method",
+    "appointment-scheduler-zh:knowledge:resource_config"
+  ],
+  "runtime_binding": "pending_actual_production",
+  "content_acceptance": "pending_actual_consumer_and_original_review"
+}

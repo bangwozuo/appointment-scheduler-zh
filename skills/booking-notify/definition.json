@@ -1,0 +1,170 @@
+{
+  "id": "skill-booking-notify",
+  "name": "预约通知草稿",
+  "version": "0.3.0-rc.1",
+  "kind": "generic",
+  "purpose": "保留为提醒排期与文案技能，输入items，输出schedule、conflicts、unscheduled及改期取消入口草稿；不承担发送。",
+  "conditions": [
+    "绑定d4完整原文为验收附件；按客户实际渠道资格、跨流程每日频控及静默时段排期，老板确认后由前台执行。"
+  ],
+  "acceptance": [
+    "核对次日前一天15:00-16:00、到店前30分钟、高风险前2小时及静默顺延；无法安排项必须显式列出，输出带AI标识。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:notify_method",
+    "appointment-scheduler-zh:knowledge:contact_config",
+    "appointment-scheduler-zh:knowledge:compliance"
+  ],
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "skills/booking-notify/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "b815ebe259f37d48ace9a4a1c7dca1ef285fdbe93df632413f82191712b73b00"
+  },
+  "original_contract": {
+    "id": "appointment-scheduler-zh:skill:booking-notify",
+    "original_id": "booking-notify",
+    "version": "1.0.0",
+    "purpose": "保留为提醒排期与文案技能，输入items，输出schedule、conflicts、unscheduled及改期取消入口草稿；不承担发送。",
+    "source": {
+      "repository": "bangwozuo/appointment-scheduler-zh",
+      "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+      "path": "skills/booking-notify/SKILL.md",
+      "source_original": {
+        "id": "art_e067a1ba8c3e44009e13",
+        "revision": 1,
+        "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+      },
+      "content_sha256": "b815ebe259f37d48ace9a4a1c7dca1ef285fdbe93df632413f82191712b73b00"
+    },
+    "source_text_sha256": "b815ebe259f37d48ace9a4a1c7dca1ef285fdbe93df632413f82191712b73b00",
+    "production_form": "skill",
+    "conditions": [
+      "绑定d4完整原文为验收附件；按客户实际渠道资格、跨流程每日频控及静默时段排期，老板确认后由前台执行。"
+    ],
+    "acceptance": [
+      "核对次日前一天15:00-16:00、到店前30分钟、高风险前2小时及静默顺延；无法安排项必须显式列出，输出带AI标识。"
+    ],
+    "knowledge_ids": [
+      "appointment-scheduler-zh:knowledge:notify_method",
+      "appointment-scheduler-zh:knowledge:contact_config",
+      "appointment-scheduler-zh:knowledge:compliance"
+    ],
+    "runtime_binding": "pending_actual_production",
+    "content_acceptance": "pending_actual_consumer_and_original_review"
+  },
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "operation": {
+        "const": "notify"
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "operation",
+      "data"
+    ],
+    "additionalProperties": false
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "status",
+      "staff_id",
+      "operation",
+      "data_origin",
+      "files",
+      "knowledge_sources",
+      "knowledge_governance"
+    ],
+    "properties": {
+      "status": {
+        "enum": [
+          "draft",
+          "needs_input"
+        ]
+      },
+      "staff_id": {
+        "const": "appointment-scheduler-zh"
+      },
+      "operation": {
+        "enum": [
+          "smart",
+          "notify",
+          "commission",
+          "forecast",
+          "conflict",
+          "no_show",
+          "booking",
+          "weekly",
+          "scheduling"
+        ]
+      },
+      "data_origin": {
+        "const": "SYNTHETIC"
+      },
+      "files": {
+        "type": "array"
+      },
+      "knowledge_sources": {
+        "type": "array"
+      },
+      "knowledge_governance": {
+        "type": "array"
+      }
+    }
+  },
+  "execution": {
+    "type": "installed-native-workflow",
+    "operation": "notify",
+    "service_required": true,
+    "offline_execution_claimed": false,
+    "checkpoint_authority": "existing WorkflowService",
+    "model_required": false
+  },
+  "current_binding": {
+    "source_run_id": "run_0b88b3c639514380a074",
+    "installation_id": "ins_e57d7f6c4cb4dc07a756350feb110f99",
+    "manifest_sha256": "e57d7f6c4cb4dc07a756350feb110f9966f80eaa98fc215ff2e13cccf3d0bfe0",
+    "same_original_business_proof": {
+      "operation_id": "appointment-191-received-notify-20261110",
+      "run_id": "run_f3f41545f7bb49668318",
+      "review_id": "art_6ffe0eb852c4421eb4bc",
+      "review_revision": 2
+    },
+    "original_source_scope_only": true,
+    "public_framework_qualification_inferred": false
+  },
+  "distribution": {
+    "path": "skills/booking-notify",
+    "client_script": "scripts/product.py",
+    "required_files": [
+      "SKILL.md",
+      "definition.json",
+      "native-schema.json",
+      "prompt.txt",
+      "scripts/product.py",
+      "references/connection.example.json",
+      "LICENSE",
+      "NOTICE"
+    ]
+  },
+  "current_runtime_binding": {
+    "source_run_id": "run_105fdebe57f34f7cacab",
+    "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+    "operation": "notify",
+    "current_DA_original": {
+      "run_id": "run_e98bebc037494bd39352",
+      "review_id": "art_941f2142bf9c4bbfa5fc",
+      "review_revision": 2
+    }
+  }
+}

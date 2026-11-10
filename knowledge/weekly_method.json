@@ -1,0 +1,40 @@
+{
+  "key": "weekly_method",
+  "title": "上座率热力与低谷行动口径",
+  "kind": "method",
+  "supply": "source_supported",
+  "consumers": [
+    "d11"
+  ],
+  "content_requirements": [
+    "从d11提取容量周加权、三档阈值、上周实际乘环比预测及区间、低谷促销排期骨架；明确50人次仅demo，效果不承诺。"
+  ],
+  "evidence": {
+    "source_key": "d11",
+    "quote": "上座率 <60% 低谷 / 60%-85% 正常 / >85% 满负荷"
+  },
+  "id": "appointment-scheduler-zh:knowledge:weekly_method",
+  "normalized_kind": "method",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "上座率热力与低谷行动口径",
+    "kind": "method",
+    "actual_source_context": [
+      "把上周排班效率推进到「低谷填平动作」：S1 上座率热力图（脚本 `scripts/run_flow.py`\n确定性计算：时段周容量 = 工作日容量 × 5 + 周末容量 × 2（demo 口径 50 人次），\n上座率 <60% 低谷 / 60%-85% 正常 / >85% 满负荷）→ S2 下周预测（上周实际 × 周环比\n系数，逐时段给 ±15% 区间）→ S3 低谷促销（每个低谷时段生成触达排期骨架：前一天\n10:00 触达、老客+次卡人群、微信优先短信兜底、同一客户每日 ≤ 2 条）→\nS4 老板确认发布。"
+    ],
+    "required_business_fields": [
+      "从d11提取容量周加权、三档阈值、上周实际乘环比预测及区间、低谷促销排期骨架；明确50人次仅demo，效果不承诺。"
+    ],
+    "consumers": [
+      "d11"
+    ],
+    "supply": "source_supported",
+    "epistemic_state": "source_method_pending_applicability_review",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

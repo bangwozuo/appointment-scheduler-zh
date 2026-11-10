@@ -1,0 +1,58 @@
+{
+  "key": "compliance",
+  "title": "个人信息、营销与AI标识现行要求核验",
+  "kind": "standard",
+  "supply": "needs_authoritative_source",
+  "consumers": [
+    "d4",
+    "d5",
+    "d6",
+    "d7",
+    "d8",
+    "d9",
+    "d10",
+    "d11",
+    "d12"
+  ],
+  "content_requirements": [
+    "由父任务取得现行官方法律、监管和平台权威要求，核验最小收集、用途及可见范围、营销文案限制与AI标识；不判断仓库合规声明当前法律正确。",
+    "保留源内人工复核、禁诱导刷评、禁绕平台和资金操作边界，形成适用版本与审查清单。"
+  ],
+  "evidence": {
+    "source_key": "d2",
+    "quote": "客户手机号等个人信息需按《个人信息保护法》最小化收集。"
+  },
+  "id": "appointment-scheduler-zh:knowledge:compliance",
+  "normalized_kind": "standard",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "个人信息、营销与AI标识现行要求核验",
+    "kind": "standard",
+    "actual_source_context": [
+      "```text\n微信小程序/企微（预约入口与通知）；可选对接门店收银 SaaS（只读核销数据）。合规边界：客户手机号等个人信息需按《个人信息保护法》最小化收集。\n```"
+    ],
+    "required_business_fields": [
+      "由父任务取得现行官方法律、监管和平台权威要求，核验最小收集、用途及可见范围、营销文案限制与AI标识；不判断仓库合规声明当前法律正确。",
+      "保留源内人工复核、禁诱导刷评、禁绕平台和资金操作边界，形成适用版本与审查清单。"
+    ],
+    "consumers": [
+      "d4",
+      "d5",
+      "d6",
+      "d7",
+      "d8",
+      "d9",
+      "d10",
+      "d11",
+      "d12"
+    ],
+    "supply": "needs_authoritative_source",
+    "epistemic_state": "source_method_pending_applicability_review",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "appointment-scheduler-zh:skill:booking-notify",
+  "original_id": "booking-notify",
+  "version": "1.0.0",
+  "purpose": "保留为提醒排期与文案技能，输入items，输出schedule、conflicts、unscheduled及改期取消入口草稿；不承担发送。",
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "skills/booking-notify/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "b815ebe259f37d48ace9a4a1c7dca1ef285fdbe93df632413f82191712b73b00"
+  },
+  "source_text_sha256": "b815ebe259f37d48ace9a4a1c7dca1ef285fdbe93df632413f82191712b73b00",
+  "production_form": "skill",
+  "conditions": [
+    "绑定d4完整原文为验收附件；按客户实际渠道资格、跨流程每日频控及静默时段排期，老板确认后由前台执行。"
+  ],
+  "acceptance": [
+    "核对次日前一天15:00-16:00、到店前30分钟、高风险前2小时及静默顺延；无法安排项必须显式列出，输出带AI标识。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:notify_method",
+    "appointment-scheduler-zh:knowledge:contact_config",
+    "appointment-scheduler-zh:knowledge:compliance"
+  ],
+  "runtime_binding": "pending_actual_production",
+  "content_acceptance": "pending_actual_consumer_and_original_review"
+}

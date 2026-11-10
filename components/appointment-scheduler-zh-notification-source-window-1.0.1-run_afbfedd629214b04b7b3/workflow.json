@@ -1,0 +1,47 @@
+{
+  "name": "预约通知·次日前15至16时规则",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "config": {}
+    },
+    {
+      "id": "execute",
+      "type": "tool",
+      "config": {
+        "resource_id": "appointment-notify-source-window-v2",
+        "input": {
+          "operation": {
+            "$path": "input.operation"
+          },
+          "data": {
+            "$path": "input.data"
+          },
+          "data_origin": {
+            "$path": "input.data_origin"
+          }
+        }
+      }
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "config": {
+        "output_path": "results.execute"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "s",
+      "source": "start",
+      "target": "execute"
+    },
+    {
+      "id": "e",
+      "source": "execute",
+      "target": "end"
+    }
+  ]
+}

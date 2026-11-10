@@ -1,0 +1,1 @@
+{"id": "appointment-scheduler-zh-seven-original-script-tools", "version": "1.0.2", "kind": "source-bound-script-workload", "source": "bangwozuo/appointment-scheduler-zh", "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9", "data_origin": "SYNTHETIC", "Host_execution": false, "whole_employee_accepted": false, "entrypoint": "generated_agent.domain:execute"}

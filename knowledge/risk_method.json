@@ -1,0 +1,42 @@
+{
+  "key": "risk_method",
+  "title": "爽约风险评分及候补轮转方法",
+  "kind": "method",
+  "supply": "source_supported",
+  "consumers": [
+    "d9"
+  ],
+  "content_requirements": [
+    "完整保留d9基线、预付与指名比例、午间系数、单因子上限和分层阈值；明确它们是原资产方法而非已验证本店概率。",
+    "定金取值、因子组合和8%/12%端点应由脚本与业务主审澄清；保留一空位一候补、30分钟未确认顺延和内部标签规则。"
+  ],
+  "evidence": {
+    "source_key": "d9",
+    "quote": "一位爽约只通知一位候补，30 分钟未确认顺延下一位"
+  },
+  "id": "appointment-scheduler-zh:knowledge:risk_method",
+  "normalized_kind": "method",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "爽约风险评分及候补轮转方法",
+    "kind": "method",
+    "actual_source_context": [
+      "把当日待执行预约推进到「高风险确认 + 候补补位」闭环：S1 特征打分（脚本\n`scripts/run_flow.py` 确定性计算：基线 7.7%，未预付 12.3%/全款 3.1%、不指名 9.8%/\n指名 5.2%、午间 12:00-14:00 系数 ×1.3、单因子上限 2.0；风险分 ≥12% 高 / 8%-12% 中 /\n<8% 低）→ S2 提前确认（高风险前 2 小时短信二次确认、中风险前 30 分钟提醒，夜间静默\n21:30-09:00 顺延）→ S3 候补补位（一位爽约只通知一位候补，30 分钟未确认顺延下一位）。"
+    ],
+    "required_business_fields": [
+      "完整保留d9基线、预付与指名比例、午间系数、单因子上限和分层阈值；明确它们是原资产方法而非已验证本店概率。",
+      "定金取值、因子组合和8%/12%端点应由脚本与业务主审澄清；保留一空位一候补、30分钟未确认顺延和内部标签规则。"
+    ],
+    "consumers": [
+      "d9"
+    ],
+    "supply": "source_supported",
+    "epistemic_state": "source_method_pending_applicability_review",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

@@ -1,0 +1,66 @@
+{
+  "input": {
+    "type": "object",
+    "properties": {
+      "operation": {
+        "const": "weekly"
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "operation",
+      "data"
+    ],
+    "additionalProperties": false
+  },
+  "output": {
+    "type": "object",
+    "required": [
+      "status",
+      "staff_id",
+      "operation",
+      "data_origin",
+      "files",
+      "knowledge_sources",
+      "knowledge_governance"
+    ],
+    "properties": {
+      "status": {
+        "enum": [
+          "draft",
+          "needs_input"
+        ]
+      },
+      "staff_id": {
+        "const": "appointment-scheduler-zh"
+      },
+      "operation": {
+        "enum": [
+          "smart",
+          "notify",
+          "commission",
+          "forecast",
+          "conflict",
+          "no_show",
+          "booking",
+          "weekly",
+          "scheduling"
+        ]
+      },
+      "data_origin": {
+        "const": "SYNTHETIC"
+      },
+      "files": {
+        "type": "array"
+      },
+      "knowledge_sources": {
+        "type": "array"
+      },
+      "knowledge_governance": {
+        "type": "array"
+      }
+    }
+  }
+}

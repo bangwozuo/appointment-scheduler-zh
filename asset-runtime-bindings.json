@@ -1,0 +1,177 @@
+{
+  "assets": [
+    {
+      "asset_id": "appointment-scheduler-zh:skill:booking-notify",
+      "source_key": "d4",
+      "operation": "notify",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-received-notify-20261110",
+        "run_id": "run_f3f41545f7bb49668318",
+        "review_id": "art_6ffe0eb852c4421eb4bc",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_e98bebc037494bd39352",
+        "review_id": "art_941f2142bf9c4bbfa5fc",
+        "review_revision": 2
+      }
+    },
+    {
+      "asset_id": "appointment-scheduler-zh:skill:commission-calc-assist",
+      "source_key": "d5",
+      "operation": "commission",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-s07-commission-20261110",
+        "run_id": "run_2ed9e4699ca54b9d9ea5",
+        "review_id": "art_353633258e47459bbddc",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_b67ff492aa9e45e5b530",
+        "review_id": "art_749f97b97d0c4e7893e9",
+        "review_revision": 2
+      }
+    },
+    {
+      "asset_id": "appointment-scheduler-zh:skill:smart-scheduling-engine",
+      "source_key": "d6",
+      "operation": "smart",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-s07-smart-20261110",
+        "run_id": "run_b55baae25bcf4bca8579",
+        "review_id": "art_38e9b40d35e84c44a125",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_eaaa6e3d04f54ee7a4ad",
+        "review_id": "art_578fc3c4a8234872b1d3",
+        "review_revision": 2
+      }
+    },
+    {
+      "asset_id": "appointment-scheduler-zh:skill:traffic-demand-forecast",
+      "source_key": "d7",
+      "operation": "forecast",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-s07-forecast-20261110",
+        "run_id": "run_49aa3a79045f41c7a933",
+        "review_id": "art_fbe944b45f7b43799bf1",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_bcbd8f2417cb438b8334",
+        "review_id": "art_2e91cd07f66d40ad93bb",
+        "review_revision": 2
+      }
+    },
+    {
+      "asset_id": "appointment-scheduler-zh:workflow:de_local_05_wf03",
+      "source_key": "d8",
+      "operation": "conflict",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-integrated-conflict-20261110",
+        "run_id": "run_f82c3326323442b09b75",
+        "review_id": "art_8dc1ef81ed5f4dbeb79f",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_7dfe540f8ba740258212",
+        "review_id": "art_e2bdff50f5e74ab281aa",
+        "review_revision": 2
+      }
+    },
+    {
+      "asset_id": "appointment-scheduler-zh:workflow:de_local_05_wf04",
+      "source_key": "d9",
+      "operation": "no_show",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-integrated-no_show-20261110",
+        "run_id": "run_5f371f3763d642dfbd4d",
+        "review_id": "art_4079e8f6a00b4096a155",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_a25bdcd563ee43d89eb5",
+        "review_id": "art_b69f6a49abce4918ab00",
+        "review_revision": 2
+      }
+    },
+    {
+      "asset_id": "appointment-scheduler-zh:workflow:de_local_05_wf01",
+      "source_key": "d10",
+      "operation": "booking",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-integrated-booking-20261110",
+        "run_id": "run_8e21519a4d93475496e1",
+        "review_id": "art_e869eb12d7454a35be2c",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_e9967930c9a34ac19a89",
+        "review_id": "art_328d16334bdb4dbead1b",
+        "review_revision": 2
+      }
+    },
+    {
+      "asset_id": "appointment-scheduler-zh:workflow:de_local_05_wf05",
+      "source_key": "d11",
+      "operation": "weekly",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-s07-weekly-20261110",
+        "run_id": "run_267a5a2fe44f49b095a0",
+        "review_id": "art_b47c1bf4fba14c1cbc52",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_6fa383be36d14ec28993",
+        "review_id": "art_4782cfc56a7d41e4bc79",
+        "review_revision": 2
+      }
+    },
+    {
+      "asset_id": "appointment-scheduler-zh:workflow:de_local_05_wf02",
+      "source_key": "d12",
+      "operation": "scheduling",
+      "source_run_id": "run_105fdebe57f34f7cacab",
+      "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+      "proof": {
+        "operation_id": "appointment-191-integrated-scheduling-20261110",
+        "run_id": "run_454ff7cb72f34eecbc00",
+        "review_id": "art_a3278d296d114efdae20",
+        "review_revision": 2
+      },
+      "source_only": false,
+      "current_DA_original": {
+        "run_id": "run_7ed1892f72a44854a828",
+        "review_id": "art_2c0f9d927c694d1993af",
+        "review_revision": 2
+      }
+    }
+  ],
+  "source_scope_sha256": "564589a29dffba82756b25552395b5aa3b6895a75225d7f6467662958e5768ba",
+  "original_scope_unchanged": true
+}

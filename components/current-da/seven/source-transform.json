@@ -1,0 +1,56 @@
+{
+  "file": "skills/commission-calc-assist/scripts/commission_calc.py",
+  "before_sha256": "689b4671f27cc817bad668d8dae3ee81dccafc46806d2dd9a73cf27e8d61d4df",
+  "after_sha256": "a2c17460c9b1a0b70b25df4374c97a49e4be93d36b8a632f6e7bfddacb133cc7",
+  "changes": [
+    {
+      "before": "import argparse\n",
+      "after": "import argparse\nfrom decimal import Decimal, ROUND_HALF_UP\ndef D(value):\n    return value if isinstance(value, Decimal) else Decimal(str(value))\ndef money(value, places=2):\n    return float(D(value).quantize(Decimal(1).scaleb(-places), rounding=ROUND_HALF_UP))\n\n"
+    },
+    {
+      "before": "round(float(it.get(\"unit_price\", 0)) * int(it.get(\"count\", 0)), nd)",
+      "after": "money(D(it.get(\"unit_price\", 0)) * int(it.get(\"count\", 0)), nd)"
+    },
+    {
+      "before": "round(revenue * rate, nd)",
+      "after": "money(D(revenue) * D(rate), nd)"
+    },
+    {
+      "before": "round(revenue * ded_rate, nd)",
+      "after": "money(D(revenue) * D(ded_rate), nd)"
+    },
+    {
+      "before": "round(commission - deduction, nd)",
+      "after": "money(D(commission) - D(deduction), nd)"
+    },
+    {
+      "before": "round(total + net, nd)",
+      "after": "money(D(total) + D(net), nd)"
+    },
+    {
+      "before": "round(float(card[\"face_value\"]) * int(card.get(\"count\", 1)) * card_rate, nd)",
+      "after": "money(D(card[\"face_value\"]) * int(card.get(\"count\", 1)) * D(card_rate), nd)"
+    },
+    {
+      "before": "round(total + card_commission, nd)",
+      "after": "money(D(total) + D(card_commission), nd)"
+    },
+    {
+      "before": "round(float(card[\"face_value\"]) * int(card.get(\"count\", 1)), nd)",
+      "after": "money(D(card[\"face_value\"]) * int(card.get(\"count\", 1)), nd)"
+    },
+    {
+      "before": "sum(r[\"项目收入(元)\"] for r in rows if r[\"品类\"] == CATEGORY_CN.get(cat, cat))",
+      "after": "sum((D(r[\"项目收入(元)\"]) for r in rows if r[\"品类\"] == CATEGORY_CN.get(cat, cat)), Decimal(0))"
+    },
+    {
+      "before": "sum(r[\"项目收入(元)\"] for r in rows if r[\"渠道\"] == CHANNEL_CN.get(ch, ch))",
+      "after": "sum((D(r[\"项目收入(元)\"]) for r in rows if r[\"渠道\"] == CHANNEL_CN.get(ch, ch)), Decimal(0))"
+    },
+    {
+      "before": "round(base * 0.01, nd)",
+      "after": "money(D(base) * D(\"0.01\"), nd)"
+    }
+  ],
+  "reason": "Original promises two-decimal half-up money rounding; binary round(0.05*0.30,2) yields0.01 instead of0.02. Decimal arithmetic preserves the explicit policy. Original source unchanged."
+}

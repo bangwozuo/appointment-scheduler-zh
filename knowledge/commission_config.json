@@ -1,0 +1,42 @@
+{
+  "key": "commission_config",
+  "title": "客户提成制度与核销数据",
+  "kind": "template",
+  "supply": "customer_configuration",
+  "consumers": [
+    "d5"
+  ],
+  "content_requirements": [
+    "由店长或财务提供生效版制度、品类费率、渠道扣点、计提基数、舍入及退卡规则，和指定期间技师排班核销、收入、渠道、售卡记录。",
+    "通过客户授权导出或可选收银SaaS只读核销接口取得，禁止把15%、5%、3%示例当默认客户制度。"
+  ],
+  "evidence": {
+    "source_key": "d5",
+    "quote": "若门店以客户实付金额为基数，各项计提及扣点需按实付口径重算。"
+  },
+  "id": "appointment-scheduler-zh:knowledge:commission_config",
+  "normalized_kind": "template",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "客户提成制度与核销数据",
+    "kind": "template",
+    "actual_source_context": [
+      "1. 假设提成基数按订单全额收入计算（未剔除优惠券、平台补贴的分摊）；若门店以客户实付金额为基数，各项计提及扣点需按实付口径重算。\n2. 假设储值卡3%提成不随客户后续消耗退卡而追回；若存在退卡追回条款，150.00元需按实际退卡情况调整。\n3. 敏感性：美团扣点每上调1个百分点，合计减少35.76元；精油SPA提成比例每上调1个百分点，合计增加35.76元。\n4. 本结果为涉及资金的测算草稿，仅供核算参考，须由店长/财务人工复核确认后方可进入工资表。"
+    ],
+    "required_business_fields": [
+      "由店长或财务提供生效版制度、品类费率、渠道扣点、计提基数、舍入及退卡规则，和指定期间技师排班核销、收入、渠道、售卡记录。",
+      "通过客户授权导出或可选收银SaaS只读核销接口取得，禁止把15%、5%、3%示例当默认客户制度。"
+    ],
+    "consumers": [
+      "d5"
+    ],
+    "supply": "customer_configuration",
+    "epistemic_state": "source_bound_conditional_template",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

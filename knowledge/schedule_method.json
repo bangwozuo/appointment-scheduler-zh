@@ -1,0 +1,48 @@
+{
+  "key": "schedule_method",
+  "title": "多资源约束排位与冲突复检规则",
+  "kind": "method",
+  "supply": "source_supported",
+  "consumers": [
+    "d6",
+    "d8",
+    "d10",
+    "d12"
+  ],
+  "content_requirements": [
+    "从d6及各流程完整原文提取优先级、缓冲、末单、房型、班次硬约束、利用率及候选复检规则，分开保留各流程粒度和时延要求。",
+    "设备约束与边界时刻歧义交父任务补充，不自行定义。"
+  ],
+  "evidence": {
+    "source_key": "d6",
+    "quote": "多资源（人/房/设备）排班与冲突检测"
+  },
+  "id": "appointment-scheduler-zh:knowledge:schedule_method",
+  "normalized_kind": "method",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "多资源约束排位与冲突复检规则",
+    "kind": "method",
+    "actual_source_context": [
+      "多资源（人/房/设备）排班与冲突检测：把待排预约单按「指名优先 → 期望时段 → 提交\n顺序」排进「技师 × 房间 × 时间」三维时间轴，逐单核对班次/午休培训段/15 分钟消毒\n缓冲/末单红线（闭店前 60 分钟），冲突当场检出并给出复检零冲突的改派候选，输出\n每位技师利用率（>85% 超负荷 / <30% 可补单）。排班表经店长确认后下发。"
+    ],
+    "required_business_fields": [
+      "从d6及各流程完整原文提取优先级、缓冲、末单、房型、班次硬约束、利用率及候选复检规则，分开保留各流程粒度和时延要求。",
+      "设备约束与边界时刻歧义交父任务补充，不自行定义。"
+    ],
+    "consumers": [
+      "d6",
+      "d8",
+      "d10",
+      "d12"
+    ],
+    "supply": "source_supported",
+    "epistemic_state": "source_method_pending_applicability_review",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

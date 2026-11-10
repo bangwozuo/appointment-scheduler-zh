@@ -1,0 +1,284 @@
+{
+  "source": {
+    "production_run_id": "run_56b1a12f1e684a49a285",
+    "project_id": "prj_5d0371e3e42b4e498467",
+    "code_id": "art_70f9231b2efd4d4197f1",
+    "code_revision": 1,
+    "code_sha256": "0bf343eab2919e6ddf9653f238dd028ff6ccc2e916182e05d3c0b4475ed4150e",
+    "test_plan_sha256": "2a7254cfebedd84789f0ea732f2666bf7bf897f95d9c420258aee48c192a55b7"
+  },
+  "knowledge_obligations": [
+    {
+      "key": "schedule_method",
+      "title": "多资源约束排位与冲突复检规则",
+      "kind": "method",
+      "supply": "source_supported",
+      "consumers": [
+        "d6",
+        "d8",
+        "d10",
+        "d12"
+      ],
+      "content_requirements": [
+        "从d6及各流程完整原文提取优先级、缓冲、末单、房型、班次硬约束、利用率及候选复检规则，分开保留各流程粒度和时延要求。",
+        "设备约束与边界时刻歧义交父任务补充，不自行定义。"
+      ],
+      "evidence": {
+        "source_key": "d6",
+        "quote": "多资源（人/房/设备）排班与冲突检测"
+      },
+      "id": "appointment-scheduler-zh:knowledge:schedule_method",
+      "normalized_kind": "method",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "resource_config",
+      "title": "门店人员项目房间设备配置",
+      "kind": "template",
+      "supply": "customer_configuration",
+      "consumers": [
+        "d6",
+        "d8",
+        "d10",
+        "d12"
+      ],
+      "content_requirements": [
+        "向本客户店长取得版本化技师技能矩阵、工时偏好、班次、休息培训、项目时长及价目、营业时间、房型数量和设备可用性。",
+        "记录生效日期、来源和资源标识；占位模板与示例均不算已取得，配置不得跨客户复用。"
+      ],
+      "evidence": {
+        "source_key": "d2",
+        "quote": "技师技能矩阵与工时偏好；历史预约与爽约记录（预测模型燃料）；项目时长标准库。"
+      },
+      "id": "appointment-scheduler-zh:knowledge:resource_config",
+      "normalized_kind": "template",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "booking_config",
+      "title": "预约快照及候补状态台账",
+      "kind": "template",
+      "supply": "customer_configuration",
+      "consumers": [
+        "d8",
+        "d9",
+        "d10",
+        "d12"
+      ],
+      "content_requirements": [
+        "由本客户通过授权导出或官方只读接口提供请求文本、订单ID、渠道、提交时间、项目时长、指名、期望时段、已有占用、确认取消状态。",
+        "补充预付状态、候补可服务时段与项目、轮转顺序、通知和30分钟回执时间；明确去重键与快照时点。"
+      ],
+      "evidence": {
+        "source_key": "d9",
+        "quote": "提供历史爽约统计、当日待执行预约、候补名单与触达约束"
+      },
+      "id": "appointment-scheduler-zh:knowledge:booking_config",
+      "normalized_kind": "template",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "notify_method",
+      "title": "提醒时机与触达排期规则",
+      "kind": "specification",
+      "supply": "source_supported",
+      "consumers": [
+        "d4",
+        "d9",
+        "d11"
+      ],
+      "content_requirements": [
+        "从d4、d9、d11保留各提醒时点、静默顺延、每日频控、渠道优先、改期取消入口、候补轮转和审批执行分工；跨流程共享计数而非各自计数。"
+      ],
+      "evidence": {
+        "source_key": "d4",
+        "quote": "本技能不直接发送，全部文案经老板确认后由前台人工执行。"
+      },
+      "id": "appointment-scheduler-zh:knowledge:notify_method",
+      "normalized_kind": "specification",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "contact_config",
+      "title": "客户授权触达与执行配置",
+      "kind": "template",
+      "supply": "customer_configuration",
+      "consumers": [
+        "d4",
+        "d9",
+        "d11"
+      ],
+      "content_requirements": [
+        "由本门店提供授权范围内客户标识、脱敏联系方式、关注及渠道资格、老客次卡分群、当日已触达次数、改期取消入口、老板确认和前台执行记录。",
+        "通过授权客户系统导出取得，不用示例名单替代真实名单，不跨门店挪用。"
+      ],
+      "evidence": {
+        "source_key": "d11",
+        "quote": "经营数据含门店商业信息，不对外披露；客户名单按授权范围使用"
+      },
+      "id": "appointment-scheduler-zh:knowledge:contact_config",
+      "normalized_kind": "template",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "commission_method",
+      "title": "提成拆解与敏感性计算口径",
+      "kind": "method",
+      "supply": "source_supported",
+      "consumers": [
+        "d5"
+      ],
+      "content_requirements": [
+        "从d5保留项目收入乘比例、渠道收入扣点、卡面值提成、两位小数、每类费率±1个百分点影响及实付基数与退卡追回复核点；数值由待核验脚本完成。"
+      ],
+      "evidence": {
+        "source_key": "d5",
+        "quote": "脚本做逐项计提、渠道扣点、储值卡提成、敏感性分析与产物落盘；"
+      },
+      "id": "appointment-scheduler-zh:knowledge:commission_method",
+      "normalized_kind": "method",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "commission_config",
+      "title": "客户提成制度与核销数据",
+      "kind": "template",
+      "supply": "customer_configuration",
+      "consumers": [
+        "d5"
+      ],
+      "content_requirements": [
+        "由店长或财务提供生效版制度、品类费率、渠道扣点、计提基数、舍入及退卡规则，和指定期间技师排班核销、收入、渠道、售卡记录。",
+        "通过客户授权导出或可选收银SaaS只读核销接口取得，禁止把15%、5%、3%示例当默认客户制度。"
+      ],
+      "evidence": {
+        "source_key": "d5",
+        "quote": "若门店以客户实付金额为基数，各项计提及扣点需按实付口径重算。"
+      },
+      "id": "appointment-scheduler-zh:knowledge:commission_config",
+      "normalized_kind": "template",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "forecast_method",
+      "title": "星期均值预测与经验区间解释",
+      "kind": "method",
+      "supply": "source_supported",
+      "consumers": [
+        "d7"
+      ],
+      "content_requirements": [
+        "从d7保留星期均值、趋势系数缺省+3%、7天输出、少于7天拒绝、±15%经验区间及节假日标注，不将经验带称统计置信区间；示例数值需独立复算。"
+      ],
+      "evidence": {
+        "source_key": "d7",
+        "quote": "区间±15%是经验取值而非统计置信区间"
+      },
+      "id": "appointment-scheduler-zh:knowledge:forecast_method",
+      "normalized_kind": "method",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "history_config",
+      "title": "门店需求爽约与容量历史",
+      "kind": "template",
+      "supply": "customer_configuration",
+      "consumers": [
+        "d7",
+        "d9",
+        "d11"
+      ],
+      "content_requirements": [
+        "由本门店授权导出带日期的实际核销序列、取消爽约口径及统计、预付和指名特征，上周分时人次、工作日周末容量及周趋势。",
+        "记录时间范围、缺失异常、口径版本、营销节假日事件与来源；不要求机械凑180天，也不把原示例视为客户历史。"
+      ],
+      "evidence": {
+        "source_key": "d11",
+        "quote": "提供上周分时段到店人次、时段容量、周趋势与触达约束"
+      },
+      "id": "appointment-scheduler-zh:knowledge:history_config",
+      "normalized_kind": "template",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "risk_method",
+      "title": "爽约风险评分及候补轮转方法",
+      "kind": "method",
+      "supply": "source_supported",
+      "consumers": [
+        "d9"
+      ],
+      "content_requirements": [
+        "完整保留d9基线、预付与指名比例、午间系数、单因子上限和分层阈值；明确它们是原资产方法而非已验证本店概率。",
+        "定金取值、因子组合和8%/12%端点应由脚本与业务主审澄清；保留一空位一候补、30分钟未确认顺延和内部标签规则。"
+      ],
+      "evidence": {
+        "source_key": "d9",
+        "quote": "一位爽约只通知一位候补，30 分钟未确认顺延下一位"
+      },
+      "id": "appointment-scheduler-zh:knowledge:risk_method",
+      "normalized_kind": "method",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "weekly_method",
+      "title": "上座率热力与低谷行动口径",
+      "kind": "method",
+      "supply": "source_supported",
+      "consumers": [
+        "d11"
+      ],
+      "content_requirements": [
+        "从d11提取容量周加权、三档阈值、上周实际乘环比预测及区间、低谷促销排期骨架；明确50人次仅demo，效果不承诺。"
+      ],
+      "evidence": {
+        "source_key": "d11",
+        "quote": "上座率 <60% 低谷 / 60%-85% 正常 / >85% 满负荷"
+      },
+      "id": "appointment-scheduler-zh:knowledge:weekly_method",
+      "normalized_kind": "method",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    },
+    {
+      "key": "compliance",
+      "title": "个人信息、营销与AI标识现行要求核验",
+      "kind": "standard",
+      "supply": "needs_authoritative_source",
+      "consumers": [
+        "d4",
+        "d5",
+        "d6",
+        "d7",
+        "d8",
+        "d9",
+        "d10",
+        "d11",
+        "d12"
+      ],
+      "content_requirements": [
+        "由父任务取得现行官方法律、监管和平台权威要求，核验最小收集、用途及可见范围、营销文案限制与AI标识；不判断仓库合规声明当前法律正确。",
+        "保留源内人工复核、禁诱导刷评、禁绕平台和资金操作边界，形成适用版本与审查清单。"
+      ],
+      "evidence": {
+        "source_key": "d2",
+        "quote": "客户手机号等个人信息需按《个人信息保护法》最小化收集。"
+      },
+      "id": "appointment-scheduler-zh:knowledge:compliance",
+      "normalized_kind": "standard",
+      "customer_facts_supplied": false,
+      "content_acceptance": "pending_employee_production"
+    }
+  ],
+  "customer_facts_supplied": false
+}

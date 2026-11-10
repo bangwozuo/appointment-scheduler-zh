@@ -1,0 +1,99 @@
+{
+  "passed": true,
+  "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+  "definitions": [
+    {
+      "id": "art_e7b99a7d75624b68af69",
+      "project_id": "prj_c5f1ffeb4b7340e09e37",
+      "kind": "production.trigger",
+      "title": "冲突与超售检测·受信事件",
+      "format": "json",
+      "revision": 2,
+      "content": "{\"enabled\": true, \"event_topic\": \"appointment.reservation.written\", \"fields\": {\"installation_id\": \"ins_4910235e40143b47fd767dd34d922df6\", \"monday_only\": false, \"operation\": \"conflict\", \"source_artifact_id\": \"art_3446a63b7eaa4789a920\", \"source_sha256\": \"d8ed37086c8f61941b437e6b33423c045534db4c4a96503efa260859e006a07a\"}, \"grace_seconds\": 120, \"id\": \"appointment-event-conflict\", \"installation_id\": null, \"kind\": \"event\", \"local_time\": null, \"misfire\": \"skip\", \"name\": \"冲突与超售检测·受信事件\", \"operation\": \"workflow\", \"resource_id\": \"appointment-trusted-source-trigger-gate\", \"resource_version\": 1, \"starts_at\": null, \"target\": \"deepagents\", \"timezone\": \"Asia/Shanghai\"}",
+      "metadata": {
+        "trigger_id": "appointment-event-conflict",
+        "native_execution": false
+      },
+      "created_at": "2026-11-10T06:28:28.827882+00:00",
+      "updated_at": "2026-11-10T06:34:48.320867+00:00"
+    },
+    {
+      "id": "art_c0da5526492e46c98e89",
+      "project_id": "prj_c5f1ffeb4b7340e09e37",
+      "kind": "production.trigger",
+      "title": "在线预约受理·受信事件",
+      "format": "json",
+      "revision": 2,
+      "content": "{\"enabled\": true, \"event_topic\": \"appointment.request.received\", \"fields\": {\"installation_id\": \"ins_4910235e40143b47fd767dd34d922df6\", \"monday_only\": false, \"operation\": \"booking\", \"source_artifact_id\": \"art_b2d0382bc6ba4ced902c\", \"source_sha256\": \"08977faccc5f29190f0ebbec13607566b0c74b334036df0bcb6a3b3e6533cca0\"}, \"grace_seconds\": 120, \"id\": \"appointment-event-booking\", \"installation_id\": null, \"kind\": \"event\", \"local_time\": null, \"misfire\": \"skip\", \"name\": \"在线预约受理·受信事件\", \"operation\": \"workflow\", \"resource_id\": \"appointment-trusted-source-trigger-gate\", \"resource_version\": 1, \"starts_at\": null, \"target\": \"deepagents\", \"timezone\": \"Asia/Shanghai\"}",
+      "metadata": {
+        "trigger_id": "appointment-event-booking",
+        "native_execution": false
+      },
+      "created_at": "2026-11-10T06:28:28.539720+00:00",
+      "updated_at": "2026-11-10T06:34:48.619592+00:00"
+    },
+    {
+      "id": "art_59f372ec63ab457792ea",
+      "project_id": "prj_c5f1ffeb4b7340e09e37",
+      "kind": "production.trigger",
+      "title": "排班周复盘·正式时序待门店启用",
+      "format": "json",
+      "revision": 2,
+      "content": "{\"enabled\": false, \"event_topic\": null, \"fields\": {\"installation_id\": \"ins_4910235e40143b47fd767dd34d922df6\", \"monday_only\": true, \"operation\": \"weekly\", \"source_artifact_id\": \"art_1da02d58f8f2449c9594\", \"source_sha256\": \"8df62ad1d2cd9fa0e9e926a48a6fe7a0c79787bc086cec7c608d355959451aca\"}, \"grace_seconds\": 120, \"id\": \"appointment-weekly-0900\", \"installation_id\": null, \"kind\": \"daily\", \"local_time\": \"09:00\", \"misfire\": \"skip\", \"name\": \"排班周复盘·正式时序待门店启用\", \"operation\": \"workflow\", \"resource_id\": \"appointment-trusted-source-trigger-gate\", \"resource_version\": 1, \"starts_at\": \"2026-11-10T06:28:27.136963+00:00\", \"target\": \"deepagents\", \"timezone\": \"Asia/Shanghai\"}",
+      "metadata": {
+        "trigger_id": "appointment-weekly-0900",
+        "native_execution": false
+      },
+      "created_at": "2026-11-10T06:28:28.248264+00:00",
+      "updated_at": "2026-11-10T06:34:48.929827+00:00"
+    },
+    {
+      "id": "art_43fafd6c441545c5bad5",
+      "project_id": "prj_c5f1ffeb4b7340e09e37",
+      "kind": "production.trigger",
+      "title": "爽约风险与候补·正式时序待门店启用",
+      "format": "json",
+      "revision": 2,
+      "content": "{\"enabled\": false, \"event_topic\": null, \"fields\": {\"installation_id\": \"ins_4910235e40143b47fd767dd34d922df6\", \"monday_only\": false, \"operation\": \"no_show\", \"source_artifact_id\": \"art_34b2b0a524a04cf896b1\", \"source_sha256\": \"4de5e88b1863ea3d69ac2ed762591866afcd2c17a41e724e5ce91a7d9ee49a6d\"}, \"grace_seconds\": 120, \"id\": \"appointment-no_show-1700\", \"installation_id\": null, \"kind\": \"daily\", \"local_time\": \"17:00\", \"misfire\": \"skip\", \"name\": \"爽约风险与候补·正式时序待门店启用\", \"operation\": \"workflow\", \"resource_id\": \"appointment-trusted-source-trigger-gate\", \"resource_version\": 1, \"starts_at\": \"2026-11-10T06:28:27.136963+00:00\", \"target\": \"deepagents\", \"timezone\": \"Asia/Shanghai\"}",
+      "metadata": {
+        "trigger_id": "appointment-no_show-1700",
+        "native_execution": false
+      },
+      "created_at": "2026-11-10T06:28:27.955404+00:00",
+      "updated_at": "2026-11-10T06:34:49.260449+00:00"
+    },
+    {
+      "id": "art_affdf5f7a20f42d4aa0c",
+      "project_id": "prj_c5f1ffeb4b7340e09e37",
+      "kind": "production.trigger",
+      "title": "爽约风险与候补·正式时序待门店启用",
+      "format": "json",
+      "revision": 2,
+      "content": "{\"enabled\": false, \"event_topic\": null, \"fields\": {\"installation_id\": \"ins_4910235e40143b47fd767dd34d922df6\", \"monday_only\": false, \"operation\": \"no_show\", \"source_artifact_id\": \"art_34b2b0a524a04cf896b1\", \"source_sha256\": \"4de5e88b1863ea3d69ac2ed762591866afcd2c17a41e724e5ce91a7d9ee49a6d\"}, \"grace_seconds\": 120, \"id\": \"appointment-no_show-0900\", \"installation_id\": null, \"kind\": \"daily\", \"local_time\": \"09:00\", \"misfire\": \"skip\", \"name\": \"爽约风险与候补·正式时序待门店启用\", \"operation\": \"workflow\", \"resource_id\": \"appointment-trusted-source-trigger-gate\", \"resource_version\": 1, \"starts_at\": \"2026-11-10T06:28:27.136963+00:00\", \"target\": \"deepagents\", \"timezone\": \"Asia/Shanghai\"}",
+      "metadata": {
+        "trigger_id": "appointment-no_show-0900",
+        "native_execution": false
+      },
+      "created_at": "2026-11-10T06:28:27.681723+00:00",
+      "updated_at": "2026-11-10T06:34:49.547028+00:00"
+    },
+    {
+      "id": "art_fd9ba3f814aa4dd093a4",
+      "project_id": "prj_c5f1ffeb4b7340e09e37",
+      "kind": "production.trigger",
+      "title": "技师场地排班·正式时序待门店启用",
+      "format": "json",
+      "revision": 2,
+      "content": "{\"enabled\": false, \"event_topic\": null, \"fields\": {\"installation_id\": \"ins_4910235e40143b47fd767dd34d922df6\", \"monday_only\": false, \"operation\": \"scheduling\", \"source_artifact_id\": \"art_369ea3372465494ebf01\", \"source_sha256\": \"38281dac13bfad2387d1d513e31095bed90724a17777a0abff8c95b4fecbec78\"}, \"grace_seconds\": 120, \"id\": \"appointment-scheduling-0630\", \"installation_id\": null, \"kind\": \"daily\", \"local_time\": \"06:30\", \"misfire\": \"skip\", \"name\": \"技师场地排班·正式时序待门店启用\", \"operation\": \"workflow\", \"resource_id\": \"appointment-trusted-source-trigger-gate\", \"resource_version\": 1, \"starts_at\": \"2026-11-10T06:28:27.136963+00:00\", \"target\": \"deepagents\", \"timezone\": \"Asia/Shanghai\"}",
+      "metadata": {
+        "trigger_id": "appointment-scheduling-0630",
+        "native_execution": false
+      },
+      "created_at": "2026-11-10T06:28:27.399568+00:00",
+      "updated_at": "2026-11-10T06:34:49.861948+00:00"
+    }
+  ],
+  "production_schedules_enabled": false,
+  "new_scheduler": false,
+  "new_models": 0
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "typed-asset-1.0",
+  "asset_type": "workflow",
+  "id": "appointment-scheduler-zh-seven-original-tools",
+  "version": "1.0.2",
+  "source_run_id": "run_c534e69e31f14bf59513",
+  "production_target": "deepagents",
+  "target_binding_sha256": "c4d23c9671ce5f8c5d0bb011f2b848162bc0914415980b623f41b2412d114650",
+  "definition_sha256": "67bbaa2ae33d0807b0554dd7ec8b231af9909d02e6b8004d21bf73fe7a132238",
+  "required_resources": [
+    {
+      "type": "tool",
+      "id": "appointment-original-audited-tools-191-v1",
+      "version": "5b23c24daf7503b69cc02de1e742da4758a41a712efbe6fc91734d031ee2c9a3",
+      "permissions": [
+        "module.execute"
+      ],
+      "side_effect": "local_write",
+      "native_agent": false,
+      "node_id": "execute"
+    }
+  ],
+  "source_set_sha256": "e598b04b64c983a8c869b63054026f4f663b480c858362769cd820b3779ddbda",
+  "dependency_snapshot_sha256": "699f4f2dc70c92f606c35370483fcd4fde01acd509d03f7999d45ec389317767",
+  "execution_backend": "existing_audited_WSL_bubblewrap_offline_libraries",
+  "executable_source": true
+}

@@ -1,0 +1,47 @@
+{
+  "name": "排班岗原七工具执行",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "config": {}
+    },
+    {
+      "id": "execute",
+      "type": "tool",
+      "config": {
+        "resource_id": "appointment-original-audited-tools-191-v1",
+        "input": {
+          "operation": {
+            "$path": "input.operation"
+          },
+          "data": {
+            "$path": "input.data"
+          },
+          "data_origin": {
+            "$path": "input.data_origin"
+          }
+        }
+      }
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "config": {
+        "output_path": "results.execute"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "s",
+      "source": "start",
+      "target": "execute"
+    },
+    {
+      "id": "e",
+      "source": "execute",
+      "target": "end"
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "schema_version": "typed-asset-1.0",
+  "asset_type": "knowledge",
+  "id": "appointment-scheduler-zh-knowledge",
+  "version": "1.0.2",
+  "source_run_id": "run_56b1a12f1e684a49a285",
+  "target_binding_sha256": "6d9fde04a9079349ec890cedf81f16371629bec16c96f70ad9642710c5896158",
+  "sources": [
+    {
+      "seed_id": "booking_config",
+      "source": {
+        "id": "source_a77a0e77491a4ac79561735c2b3ad951",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-booking_config.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_97b9c6cec0b44c439984a120d10f8f82",
+        "object_sha256": "0034e0a8c89a7a4cbe499b9e651bd8824e17b39520286b380d44ffa7c4153f72",
+        "logical_key": "appointment-scheduler-zh-knowledge-booking_config",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_f31f02907b9c47529f90",
+      "classification_revision": 1,
+      "content_sha256": "0034e0a8c89a7a4cbe499b9e651bd8824e17b39520286b380d44ffa7c4153f72"
+    },
+    {
+      "seed_id": "commission_config",
+      "source": {
+        "id": "source_24b244f0134c43dfa1a54c0ad5e2034d",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-commission_config.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_d5e1c987129e4038860fcfa49fb81cbf",
+        "object_sha256": "17730487a99adead3287bd4c65bf9f88422eb1ea4234d5c3791a2c43150dfe31",
+        "logical_key": "appointment-scheduler-zh-knowledge-commission_config",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_58c6620c22ee49c3a3ff",
+      "classification_revision": 1,
+      "content_sha256": "17730487a99adead3287bd4c65bf9f88422eb1ea4234d5c3791a2c43150dfe31"
+    },
+    {
+      "seed_id": "commission_method",
+      "source": {
+        "id": "source_1ae935b73e6f4308b18233a2e29198a9",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-commission_method.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_8abf551860c44b2994ddabbc53c883bc",
+        "object_sha256": "8d23112100b473b4362f5fe63b81d4eaf4cae984e3294fb5275f9ec0aeff70f2",
+        "logical_key": "appointment-scheduler-zh-knowledge-commission_method",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_9316fe6dfb53492eb12b",
+      "classification_revision": 1,
+      "content_sha256": "8d23112100b473b4362f5fe63b81d4eaf4cae984e3294fb5275f9ec0aeff70f2"
+    },
+    {
+      "seed_id": "compliance",
+      "source": {
+        "id": "source_46d4449fa1aa444caf5ccf22a051c8aa",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-compliance.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_dff05e0039634066afd17edb1cc5d96b",
+        "object_sha256": "5ce5ae8b9f43fb92aa85845072f1da1f54ebc4a910dd08a3786631e71bd597dd",
+        "logical_key": "appointment-scheduler-zh-knowledge-compliance",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_b6bd7639b0b14c3d9019",
+      "classification_revision": 1,
+      "content_sha256": "5ce5ae8b9f43fb92aa85845072f1da1f54ebc4a910dd08a3786631e71bd597dd"
+    },
+    {
+      "seed_id": "contact_config",
+      "source": {
+        "id": "source_0ba964bdad304cff90e80dbd6e6fbcd1",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-contact_config.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_52c6d30bcb8340f291579ca5b8f4bc7a",
+        "object_sha256": "c69a54a7bf4eb5a4dc681b2b36c0dcd39224baaf916bcb311f8bb834a8d50953",
+        "logical_key": "appointment-scheduler-zh-knowledge-contact_config",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_ba1ca0f717d7484b9f61",
+      "classification_revision": 1,
+      "content_sha256": "c69a54a7bf4eb5a4dc681b2b36c0dcd39224baaf916bcb311f8bb834a8d50953"
+    },
+    {
+      "seed_id": "forecast_method",
+      "source": {
+        "id": "source_381dcc2cb70947ac9c408659fc93b36f",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-forecast_method.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_90b5d6c63aa84029a3d51b13ab04b8b7",
+        "object_sha256": "5d7c7bc465ab9ebdef9c740bb43c29c48974bafb9ac3ab672db096ae0a96d539",
+        "logical_key": "appointment-scheduler-zh-knowledge-forecast_method",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_b1c2242587e8418d9b0c",
+      "classification_revision": 1,
+      "content_sha256": "5d7c7bc465ab9ebdef9c740bb43c29c48974bafb9ac3ab672db096ae0a96d539"
+    },
+    {
+      "seed_id": "history_config",
+      "source": {
+        "id": "source_a018671b740c4b1c973546ae084cafd0",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-history_config.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_33f66fc11ac8431a83855a23b0a5a1cd",
+        "object_sha256": "32e6e4a21506ba0e4684d89f12b599b9d3609aac295f89ff90e0ea07be44bc76",
+        "logical_key": "appointment-scheduler-zh-knowledge-history_config",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_f34537f8c2b349feae93",
+      "classification_revision": 1,
+      "content_sha256": "32e6e4a21506ba0e4684d89f12b599b9d3609aac295f89ff90e0ea07be44bc76"
+    },
+    {
+      "seed_id": "notify_method",
+      "source": {
+        "id": "source_9333418368c24087938b7c42c29f573f",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-notify_method.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_4f1ec0e662a94d4cb35c14bb139b8512",
+        "object_sha256": "4dedc1d96659cbd4bd56af12d581e78dc0ba744e110c4e7e6f810995f37289d2",
+        "logical_key": "appointment-scheduler-zh-knowledge-notify_method",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_adfaafa782b8458b919f",
+      "classification_revision": 1,
+      "content_sha256": "4dedc1d96659cbd4bd56af12d581e78dc0ba744e110c4e7e6f810995f37289d2"
+    },
+    {
+      "seed_id": "resource_config",
+      "source": {
+        "id": "source_225a8d848ccc447d923d92e868048eed",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-resource_config.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_adf2cc3575f94129b6881ca34e981ab4",
+        "object_sha256": "fb35924a21ccf65d7393a089120da2980814cdffab934c9fc93232d19b7121be",
+        "logical_key": "appointment-scheduler-zh-knowledge-resource_config",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_0310a9e9317645bb8484",
+      "classification_revision": 1,
+      "content_sha256": "fb35924a21ccf65d7393a089120da2980814cdffab934c9fc93232d19b7121be"
+    },
+    {
+      "seed_id": "risk_method",
+      "source": {
+        "id": "source_fdb38c2b1168484981ac6a5a55250e1e",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-risk_method.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_33586a530ced47fe898c9cab7122177a",
+        "object_sha256": "ed6a45aaac88fa407d1df3f6c806de1e2555455d0a271a3d8bfb75d30f0be346",
+        "logical_key": "appointment-scheduler-zh-knowledge-risk_method",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_e1242b934f524aed8af0",
+      "classification_revision": 1,
+      "content_sha256": "ed6a45aaac88fa407d1df3f6c806de1e2555455d0a271a3d8bfb75d30f0be346"
+    },
+    {
+      "seed_id": "schedule_method",
+      "source": {
+        "id": "source_075539ba4c834dc68bd9edf27ed7fa96",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-schedule_method.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_29ef7267def14a75976c392252c20b0a",
+        "object_sha256": "898d90b95209c33cb05b9e3cdc4b1c05d2efcfb123d46dfe06f9e09e76640d73",
+        "logical_key": "appointment-scheduler-zh-knowledge-schedule_method",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_7880d669f01a4c938300",
+      "classification_revision": 1,
+      "content_sha256": "898d90b95209c33cb05b9e3cdc4b1c05d2efcfb123d46dfe06f9e09e76640d73"
+    },
+    {
+      "seed_id": "weekly_method",
+      "source": {
+        "id": "source_5037cec452a0436ead044d97641f3745",
+        "project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+        "title": "appointment-scheduler-zh-knowledge-weekly_method.md",
+        "revision": 1,
+        "state": "active",
+        "source_revision_id": "sr_e21685d735bc43539ec0a1771aca25c9",
+        "object_sha256": "a5260d76657d4a2bea1387c603c3a4aaebe7f14298edfe7bbb2bdbf5f6839dcb",
+        "logical_key": "appointment-scheduler-zh-knowledge-weekly_method",
+        "source_revision_number": 1,
+        "owner_id": null,
+        "tags": [],
+        "review_due": null,
+        "lifecycle": "active"
+      },
+      "classification_artifact_id": "art_b8de198f06cb407baa3d",
+      "classification_revision": 1,
+      "content_sha256": "a5260d76657d4a2bea1387c603c3a4aaebe7f14298edfe7bbb2bdbf5f6839dcb"
+    }
+  ],
+  "publication": {
+    "operation_id": "op_2c4c3db49b984e6c94b99872cafa4c15",
+    "resource_id": "gen_f54637750b87493d9dcaa85f2d981512",
+    "revision": 1,
+    "state": "committed",
+    "request_hash": "eefa34cbc55e89debc2d731b0b92e00cdb565936548d375522887f8f6b6f3d0a"
+  },
+  "build": {
+    "id": "job_4128069e07234753b8fa3d54edabfb21",
+    "kind": "index",
+    "state": "succeeded",
+    "steps": [],
+    "input_hash": "3d138b131d445b9a0b7e931500eb077f89eb0f7f330b65b2e3dda27753d73985",
+    "fence": 0,
+    "error": null,
+    "operation_id": "op_4b0ed8bf2c614e22b36217fa108d6b09",
+    "generation_state": "sealed",
+    "result": {
+      "kind": "generation",
+      "id": "gen_f54637750b87493d9dcaa85f2d981512",
+      "href": "/api/v1/projects/project_6c49279d068b4585aedb701e0c1e3b84"
+    }
+  },
+  "provider_binding": {
+    "artifact_id": "art_07b662bf5747479daeba",
+    "revision": 1,
+    "binding_sha256": "2fb9acd247c0fcb8568662b00142ea99f7d86de07d28a0198be34fa66a86afef",
+    "generation_id": "gen_f54637750b87493d9dcaa85f2d981512",
+    "source_ids": [
+      "source_a77a0e77491a4ac79561735c2b3ad951",
+      "source_24b244f0134c43dfa1a54c0ad5e2034d",
+      "source_1ae935b73e6f4308b18233a2e29198a9",
+      "source_46d4449fa1aa444caf5ccf22a051c8aa",
+      "source_0ba964bdad304cff90e80dbd6e6fbcd1",
+      "source_381dcc2cb70947ac9c408659fc93b36f",
+      "source_a018671b740c4b1c973546ae084cafd0",
+      "source_9333418368c24087938b7c42c29f573f",
+      "source_225a8d848ccc447d923d92e868048eed",
+      "source_fdb38c2b1168484981ac6a5a55250e1e",
+      "source_075539ba4c834dc68bd9edf27ed7fa96",
+      "source_5037cec452a0436ead044d97641f3745"
+    ]
+  },
+  "remote_project_id": "project_6c49279d068b4585aedb701e0c1e3b84",
+  "native_workflow": {
+    "id": "wf_1d9f4fdb28854602aab1",
+    "version": 1,
+    "sha256": "a0d7777a6ae2298abf1ad53c741d73271c1fe222225b1362ab71712e176e630a"
+  },
+  "source_body_mirror": false,
+  "new_model_requests": 0,
+  "scope": "seven_exact_real_source_knowledge_types_not_full_K18"
+}

@@ -1,0 +1,173 @@
+{
+  "id": "skill-call-conflict-oversell",
+  "name": "冲突核对",
+  "version": "0.3.0-rc.1",
+  "kind": "workflow_call",
+  "purpose": "保留新预约写入事件后的实时检测工作流及确定性扫描工具，输出冲突报告与经复检改派候选，不执行改派。",
+  "conditions": [
+    "绑定d8完整原文；30秒内完成仍为必需目标，事件接入、时延凭据及脚本未提供。",
+    "执行改派须老板与客户双重确认；赔付由店长决定。"
+  ],
+  "acceptance": [
+    "按最早期望时刻预落位，覆盖双订含缓冲、房型、班次午休培训、末单四类；每处给至少一条零冲突候选或明确需改期；保留报告xlsx、JSON及通知下游接口。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:schedule_method",
+    "appointment-scheduler-zh:knowledge:resource_config",
+    "appointment-scheduler-zh:knowledge:booking_config"
+  ],
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "workflows/conflict-oversell-detect-flow/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "a2075cbe5aa4319d902651c445e96089e9d8154dedb83441aee458fa1bb8a692"
+  },
+  "original_contract": {
+    "id": "appointment-scheduler-zh:workflow:de_local_05_wf03",
+    "original_id": "de_local_05_wf03",
+    "version": "1.0.0",
+    "purpose": "保留新预约写入事件后的实时检测工作流及确定性扫描工具，输出冲突报告与经复检改派候选，不执行改派。",
+    "source": {
+      "repository": "bangwozuo/appointment-scheduler-zh",
+      "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+      "path": "workflows/conflict-oversell-detect-flow/SKILL.md",
+      "source_original": {
+        "id": "art_e067a1ba8c3e44009e13",
+        "revision": 1,
+        "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+      },
+      "content_sha256": "a2075cbe5aa4319d902651c445e96089e9d8154dedb83441aee458fa1bb8a692"
+    },
+    "source_text_sha256": "a2075cbe5aa4319d902651c445e96089e9d8154dedb83441aee458fa1bb8a692",
+    "production_form": "combination",
+    "conditions": [
+      "绑定d8完整原文；30秒内完成仍为必需目标，事件接入、时延凭据及脚本未提供。",
+      "执行改派须老板与客户双重确认；赔付由店长决定。"
+    ],
+    "acceptance": [
+      "按最早期望时刻预落位，覆盖双订含缓冲、房型、班次午休培训、末单四类；每处给至少一条零冲突候选或明确需改期；保留报告xlsx、JSON及通知下游接口。"
+    ],
+    "knowledge_ids": [
+      "appointment-scheduler-zh:knowledge:schedule_method",
+      "appointment-scheduler-zh:knowledge:resource_config",
+      "appointment-scheduler-zh:knowledge:booking_config"
+    ],
+    "runtime_binding": "pending_actual_production",
+    "content_acceptance": "pending_actual_consumer_and_original_review"
+  },
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "operation": {
+        "const": "conflict"
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "operation",
+      "data"
+    ],
+    "additionalProperties": false
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "status",
+      "staff_id",
+      "operation",
+      "data_origin",
+      "files",
+      "knowledge_sources",
+      "knowledge_governance"
+    ],
+    "properties": {
+      "status": {
+        "enum": [
+          "draft",
+          "needs_input"
+        ]
+      },
+      "staff_id": {
+        "const": "appointment-scheduler-zh"
+      },
+      "operation": {
+        "enum": [
+          "smart",
+          "notify",
+          "commission",
+          "forecast",
+          "conflict",
+          "no_show",
+          "booking",
+          "weekly",
+          "scheduling"
+        ]
+      },
+      "data_origin": {
+        "const": "SYNTHETIC"
+      },
+      "files": {
+        "type": "array"
+      },
+      "knowledge_sources": {
+        "type": "array"
+      },
+      "knowledge_governance": {
+        "type": "array"
+      }
+    }
+  },
+  "execution": {
+    "type": "installed-native-workflow",
+    "operation": "conflict",
+    "service_required": true,
+    "offline_execution_claimed": false,
+    "checkpoint_authority": "existing WorkflowService",
+    "model_required": false
+  },
+  "current_binding": {
+    "source_run_id": "run_0b88b3c639514380a074",
+    "installation_id": "ins_e57d7f6c4cb4dc07a756350feb110f99",
+    "manifest_sha256": "e57d7f6c4cb4dc07a756350feb110f9966f80eaa98fc215ff2e13cccf3d0bfe0",
+    "same_original_business_proof": {
+      "operation_id": "appointment-191-integrated-conflict-20261110",
+      "run_id": "run_f82c3326323442b09b75",
+      "review_id": "art_8dc1ef81ed5f4dbeb79f",
+      "review_revision": 2
+    },
+    "original_source_scope_only": true,
+    "public_framework_qualification_inferred": false
+  },
+  "distribution": {
+    "path": "workflows/call-conflict-oversell",
+    "client_script": "scripts/product.py",
+    "required_files": [
+      "SKILL.md",
+      "definition.json",
+      "native-schema.json",
+      "prompt.txt",
+      "scripts/product.py",
+      "references/connection.example.json",
+      "LICENSE",
+      "NOTICE",
+      "workflow.json"
+    ]
+  },
+  "current_runtime_binding": {
+    "source_run_id": "run_105fdebe57f34f7cacab",
+    "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+    "operation": "conflict",
+    "current_DA_original": {
+      "run_id": "run_7dfe540f8ba740258212",
+      "review_id": "art_e2bdff50f5e74ab281aa",
+      "review_revision": 2
+    }
+  }
+}

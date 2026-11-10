@@ -1,0 +1,48 @@
+{
+  "key": "resource_config",
+  "title": "门店人员项目房间设备配置",
+  "kind": "template",
+  "supply": "customer_configuration",
+  "consumers": [
+    "d6",
+    "d8",
+    "d10",
+    "d12"
+  ],
+  "content_requirements": [
+    "向本客户店长取得版本化技师技能矩阵、工时偏好、班次、休息培训、项目时长及价目、营业时间、房型数量和设备可用性。",
+    "记录生效日期、来源和资源标识；占位模板与示例均不算已取得，配置不得跨客户复用。"
+  ],
+  "evidence": {
+    "source_key": "d2",
+    "quote": "技师技能矩阵与工时偏好；历史预约与爽约记录（预测模型燃料）；项目时长标准库。"
+  },
+  "id": "appointment-scheduler-zh:knowledge:resource_config",
+  "normalized_kind": "template",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "门店人员项目房间设备配置",
+    "kind": "template",
+    "actual_source_context": [
+      "```text\n技师技能矩阵与工时偏好；历史预约与爽约记录（预测模型燃料）；项目时长标准库。\n```"
+    ],
+    "required_business_fields": [
+      "向本客户店长取得版本化技师技能矩阵、工时偏好、班次、休息培训、项目时长及价目、营业时间、房型数量和设备可用性。",
+      "记录生效日期、来源和资源标识；占位模板与示例均不算已取得，配置不得跨客户复用。"
+    ],
+    "consumers": [
+      "d6",
+      "d8",
+      "d10",
+      "d12"
+    ],
+    "supply": "customer_configuration",
+    "epistemic_state": "source_bound_conditional_template",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

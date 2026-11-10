@@ -1,0 +1,47 @@
+{
+  "name": "排班与通知原规则执行",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "start",
+      "config": {}
+    },
+    {
+      "id": "execute",
+      "type": "tool",
+      "config": {
+        "resource_id": "appointment-two-source-skills-191",
+        "input": {
+          "operation": {
+            "$path": "input.operation"
+          },
+          "data": {
+            "$path": "input.data"
+          },
+          "data_origin": {
+            "$path": "input.data_origin"
+          }
+        }
+      }
+    },
+    {
+      "id": "end",
+      "type": "end",
+      "config": {
+        "output_path": "results.execute"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "s",
+      "source": "start",
+      "target": "execute"
+    },
+    {
+      "id": "e",
+      "source": "execute",
+      "target": "end"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "id": "appointment-scheduler-zh:workflow:de_local_05_wf05",
+  "original_id": "de_local_05_wf05",
+  "version": "1.0.0",
+  "purpose": "保留每周一热力分析、下周分时预测、低谷触达骨架与老板确认发布的周报工作流。",
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "workflows/scheduling-efficiency-weekly-flow/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "8f907ccc9340c0fa4d3ddb0a2ad6376337d58aeb24ce387214a145ca0532029c"
+  },
+  "source_text_sha256": "8f907ccc9340c0fa4d3ddb0a2ad6376337d58aeb24ce387214a145ca0532029c",
+  "production_form": "combination",
+  "conditions": [
+    "绑定d11完整原文；使用真实容量、人次及趋势，demo容量50不得当客户事实；不得跳过老板确认发布促销或价格调整。"
+  ],
+  "acceptance": [
+    "核验工作日容量×5+周末容量×2、低于60%/60%-85%/高于85%分档、环比预测±15%；低谷前一天10:00老客与次卡人群微信优先短信兜底，继承静默与频控；保留周报、热力图、JSON。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:weekly_method",
+    "appointment-scheduler-zh:knowledge:history_config",
+    "appointment-scheduler-zh:knowledge:contact_config",
+    "appointment-scheduler-zh:knowledge:notify_method",
+    "appointment-scheduler-zh:knowledge:compliance"
+  ],
+  "runtime_binding": "pending_actual_production",
+  "content_acceptance": "pending_actual_consumer_and_original_review"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "appointment-scheduler-zh:workflow:de_local_05_wf01",
+  "original_id": "de_local_05_wf01",
+  "version": "1.0.0",
+  "purpose": "保留微信或小程序请求到可写单确认档期的受理工作流，解析、确定性匹配、客户确认分阶段输出。",
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "workflows/online-booking-intake-flow/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "bcbb48c24bd26bad6e1fc80f4013af0c9a6bd9b962d95a21d2a0ea2003cbcb21"
+  },
+  "source_text_sha256": "bcbb48c24bd26bad6e1fc80f4013af0c9a6bd9b962d95a21d2a0ea2003cbcb21",
+  "production_form": "combination",
+  "conditions": [
+    "绑定d10完整原文；项目、时长、指名、期望时段齐备并有真实价目与资源快照；缺项终止。",
+    "脚本确定性排位不可降级为口算；写单需客户确认和前台复核，本分析不写单。"
+  ],
+  "acceptance": [
+    "核对价目、班次、已有占用含15分钟缓冲、房型、5分钟粒度最早档期与闭店前60分钟末单；保留受理确认单xlsx和JSON，未确认不通知技师。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:schedule_method",
+    "appointment-scheduler-zh:knowledge:resource_config",
+    "appointment-scheduler-zh:knowledge:booking_config"
+  ],
+  "runtime_binding": "pending_actual_production",
+  "content_acceptance": "pending_actual_consumer_and_original_review"
+}

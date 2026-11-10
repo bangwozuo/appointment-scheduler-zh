@@ -1,169 +1,21 @@
 # 排班调度师
 
-> **漏单错单归零、低谷填平的排班大脑**
+当前版本：0.3.0-rc.1。主 Skill 调用已安装的 DA 原生员工，办理多资源排班、通知草稿、提成、客流预测、冲突、爽约候补、预约受理与周复盘。
 
-![排班调度师 · 动态演示](docs/assets/hero.gif)
+## 开始使用
 
-*▲ 真实执行录播（自动循环播放）· [▶ 观看完整版合集视频](docs/demo.mp4)*
+入口为 `clients/skill/appointment-scheduler-zh/SKILL.md`，同包包含标准库客户端、连接示例、LICENSE 与 NOTICE。先检查准确安装，再以稳定原编号提交；丢响应只查原事项。连接示例是本地验收部署绑定，其他环境应由部署方提供获权的准确服务绑定，不能复制本地身份冒充已安装。
 
-[![Stage](https://img.shields.io/badge/stage-P1-orange)](https://github.com/bangwozuo)
-[![Asset](https://img.shields.io/badge/asset-prompt--only-blueviolet)](#资产形态)
-[![NoKey](https://img.shields.io/badge/API%20Key-not%20required-success)](#资产形态)
-[![License](https://img.shields.io/badge/license-Apache--2.0-green)](LICENSE)
+## 工程与资产
 
----
+`lib/employee.json` 保留岗位、输入输出、职责、条件、知识、协作评估及分发属性。`skills/` 是四项方法资产，`workflows/call-*` 是五项原生流程调用 Skill，`clients/skill/` 是整岗主 Skill。没有独立远程 Agent 服务，因此不生成空的远程 Skill。各目录保留来源 contract、schema、prompt、许可和调用实现。
 
-## 它是谁
+`components/current-da/` 保存真实执行的五组确定性源码与测试；`server/bindings/` 保存当前原生工作流、安装与触发绑定。运行服务依赖获权的 Agent 生产引擎 DA2.0.2 与知识服务；本仓库不是完整引擎的复制品。
 
-面向 **本地生活商家** 的数字员工资产包。
+## 已验证范围
 
-| 项目 | 内容 |
-|------|------|
-| 目标用户 | 美业/健身/家政/教培等预约制门店（约千万级，餐饮不适用，据 R4 调研） |
-| 交付物 | 漏单错单率 → 0；爽约率下降 ≥30%；低谷时段上座率提升可追踪 |
-| 技能数 | 4 |
-| 工作流数 | 5 |
-| 旧名存档 | `预约排班调度员` |
+九项原业务使用明确合成输入，经当前 DA 执行、实际文件及十二类知识引用核对、准确原稿人工停点和自动 QA 确认至原生 END。主 Skill 已真实安装并调用；旧原稿与回执保持原字节，只读可查，同门店旧联系回执继续参与频控。受信事件通过当前安装执行，同一事件不重复新建。八阶段设计/技术与业务验收分别保留原件，不把安装当作客户验收。
 
----
+四个生产日程尚未启用，未接入真实客户连接器。通知草稿不等于已发送，预约草稿不等于外部预约写入，提成不等于发薪。其他 Host、实体手机、跨机器服务器安装与商业效果尚未验收。Trace 加密限制 R78 保留。发行是上述准确范围的候选版本，不表示全部38岗已交付。
 
-## 资产形态
-
-**纯提示词资产** —— 这是理解本仓库的关键：
-
-| 特性 | 说明 |
-|------|------|
-| ✅ 无需 API Key | 一个 Key 都不需要 |
-| ✅ 无需部署 | 没有服务端，没有脚本 |
-| ✅ 无需依赖 | 克隆后用文本编辑器就能看 |
-| ✅ 平台无关 | 粘贴到任何 AI 工具即可使用 |
-| ✅ 用户自备算力 | 模型来自你自己的订阅 |
-
----
-
-## 快速开始
-
-```text
-1. 打开 skills/smart-scheduling-engine/prompt.txt
-2. 全文复制
-3. 粘贴到你常用的 AI 工具（Coze / WorkBuddy / Dify / Claude / ChatGPT）
-4. 按 SKILL.md 的输入规格提供数据
-```
-
-就这四步。完整指引见 [使用手册](docs/04-usage.md)。
-
----
-
-## 仓库结构
-
-```text
-appointment-scheduler-zh/
-├── README.md / employee.md / package.yaml     # 入口与 12 字段定义卡
-├── docs/01~07                                 # 员工级文档（架构/流程/场景/手册/示例/录像/测试）
-├── skills/                                    # 4 个原子技能
-│   └── <skill>/
-│       ├── README.md  SKILL.md  prompt.txt  schema.json  examples/
-│       └── docs/                              # 该技能自己的 10 项文档 + 配图
-├── workflows/                                 # 5 条工作流（复合技能）
-│   └── <workflow>/
-│       ├── README.md  SKILL.md  prompt.txt  schema.json  examples/
-│       └── docs/                              # 该工作流自己的 10 项文档 + 配图
-├── knowledge/                                 # RAG wiki 知识库
-│   ├── README.md  RAG-接入指南.md  template.md
-│   └── wiki/(index.md, _template.md, entries/)
-├── connectors/                                # 连接器说明 + 合规红线
-├── quality/                                   # 效果基线与追踪日志
-└── tests/                                     # 资产校验测试（离线，无需密钥）
-```
-
-### 每个技能 / 工作流自带的 docs
-
-| 文档 | 内容 |
-|------|------|
-| `README.md` | 资产速览与快速开始 |
-| `docs/01-usage-manual.md` | 安装使用手册 |
-| `docs/02-architecture.md` | 业务架构图 |
-| `docs/03-flow.md` | 流程图（Mermaid + 配图） |
-| `docs/04-examples.md` | 使用示例 |
-| `docs/05-media.md` | 截图和录屏（清单 + 分镜脚本） |
-| `docs/06-scenarios.md` | 使用场景（适用 / 不适用） |
-| `docs/07-audience.md` | 用户群体 |
-| `docs/08-value.md` | 解决问题与价值 |
-| `docs/09-test-report.md` | 测试报告 |
-| `docs/assets/overview.svg` | 自动生成的流程示意图 |
-
----
-
-## 交付物导航
-
-| 文档 | 内容 |
-|------|------|
-| [业务架构](docs/01-architecture.md) | 四层架构 + 数据流 + 能力边界 |
-| [工作流流程](docs/02-workflow.md) | 5 条工作流的 DAG 可视化 |
-| [使用场景](docs/03-scenarios.md) | 3 个真实场景（含前后对比） |
-| [使用手册](docs/04-usage.md) | 各平台导入指引 + 常见问题 |
-| [示例库](docs/05-examples.md) | 4 组输入输出示例 |
-| [录像脚本](docs/06-recording-script.md) | 7 镜头分镜 + 旁白稿 |
-| [校验报告](docs/07-test-report.md) | 资产质量校验结果 |
-
----
-
-## 技能清单（4 个）
-
-| # | 技能 | 能力族 | 复杂度 | 说明文档 |
-|---|------|--------|--------|----------|
-| 1 | 智能排班引擎 | 排期与调度 | `L` | [README](skills/smart-scheduling-engine/README.md) |
-| 2 | 预约消息通知 | 排期与调度 | `M` | [README](skills/booking-notify/README.md) |
-| 3 | 客流需求预测 | 趋势预测 | `M` | [README](skills/traffic-demand-forecast/README.md) |
-| 4 | 提成计算辅助 | 测算与评估 | `S` | [README](skills/commission-calc-assist/README.md) |
-
-## 工作流清单（5 条）
-
-| # | 工作流 | 阶段 | 复杂度 | 触发 | 说明文档 |
-|---|--------|------|--------|------|----------|
-| 1 | 在线预约受理 | `P1` | `M` | 事件（客户微信/小程序发起） | [README](workflows/online-booking-intake-flow/README.md) |
-| 2 | 技师与场地排班 | `P1` | `M` | 定时（每日 6:30） | [README](workflows/staff-room-scheduling-flow/README.md) |
-| 3 | 冲突与超售检测 | `P1` | `S` | 事件（新预约写入） | [README](workflows/conflict-oversell-detect-flow/README.md) |
-| 4 | 爽约预测与补位 | `P1` | `L` | 定时（每日两次扫描） | [README](workflows/no-show-predict-backfill-flow/README.md) |
-| 5 | 排班效率周报 | `P2` | `S` | 定时（每周一） | [README](workflows/scheduling-efficiency-weekly-flow/README.md) |
-
----
-
-## 知识库与连接器
-
-| 目录 | 说明 |
-|------|------|
-| [`knowledge/`](knowledge/README.md) | RAG wiki 知识库：填入业务信息可显著提升输出质量 |
-| [`connectors/`](connectors/README.md) | 连接器说明：数据从哪来、怎么合规地来 |
-
----
-
-## 资产校验
-
-```bash
-pip install -r requirements.txt
-pytest tests/ -v
-```
-
-校验技能完整性、提示词结构、契约一致性、工作流 DAG、技能级与工作流级 docs 完整性、知识库 wiki 与连接器结构。
-**不需要任何 API Key。**
-
----
-
-## 合规声明
-
-- ✅ 所有输出为 **AI 辅助生成**，交付前须人工审核
-- ✅ 提示词内置**违禁词禁止清单**，符合《广告法》要求
-- ✅ 遵循《人工智能生成合成内容标识办法》
-- ✅ 连接器只走**官方 API** 或**用户导出数据**
-- ✅ 所有对外发布动作**保留人工确认环节**
-
----
-
-## 许可
-
-[Apache-2.0](LICENSE) — 可自由使用、修改、商用
-
----
-
-*由 bangwozuo 业务库自动生成 · 2026-09-29*
+完整属性见 `employee-scope.json`、`lib/employee.json` 与 `quality-report.json`；评测分母为九个选定合成操作，不能解释为源码覆盖率或通用质量评分。历史提示词和文档继续保留来源，不替代当前可执行入口。

@@ -1,0 +1,103 @@
+{
+  "overall_score": 100.0,
+  "test_coverage": 100.0,
+  "documentation_score": 100.0,
+  "metric_definitions": {
+    "overall_score": "9/9 selected original synthetic source-operation receipt cases; not general Agent quality or full release readiness",
+    "test_coverage": "9/9 primary action IDs mapped to actual source-case proofs; not source line/branch coverage or all conditional/customer scenarios",
+    "documentation_score": "82/82 declared current client/definition/license files; not an editorial quality grade"
+  },
+  "selected_case_count": 9,
+  "quality_generalization_allowed": false,
+  "security_scan": {
+    "status": "warning",
+    "issues": [
+      {
+        "severity": "info",
+        "description": "R78 encryption and comprehensive security review remain unaccepted. This is fixed local synthetic source scope, not a production security certification.",
+        "location": "deployment"
+      }
+    ],
+    "scanner_version": "source-boundary-review-only; not a vulnerability scanner"
+  },
+  "performance_baseline": {
+    "avg_response_time_ms": 229.3333333315483,
+    "p95_response_time_ms": 250.0,
+    "throughput_rps": 4.3604651163130095,
+    "memory_usage_mb": 180.6796875,
+    "tested_at": "2026-11-10T06:41:06.468336+00:00",
+    "scope": "three sequential read-only installed contract GETs; empirical maximum, not concurrency, general SLA or workload performance",
+    "samples_ms": [
+      250.0,
+      219.00000001187436,
+      218.99999998277053
+    ],
+    "memory_scope": "historical e57 process observation only; current process memory not measured"
+  },
+  "last_evaluated_at": "2026-11-10T06:41:06.468336+00:00",
+  "native_scope": {
+    "source_run_id": "run_105fdebe57f34f7cacab",
+    "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+    "original_primary_assets": 9,
+    "knowledge_obligations": 12
+  },
+  "full_191_release_accepted": false,
+  "current_public_framework_qualification_inferred": false,
+  "all38_accepted": false,
+  "limitations": [
+    "actual customer sources/authority/send/booking/payroll/ROI not inferred",
+    "other Hosts and phone interaction not verified",
+    "four production daily schedules disabled",
+    "server installation on another machine not verified",
+    "R78 retained; no8890 cutover"
+  ],
+  "current_DA_originals": {
+    "smart": {
+      "run_id": "run_eaaa6e3d04f54ee7a4ad",
+      "review_id": "art_578fc3c4a8234872b1d3",
+      "review_revision": 2
+    },
+    "notify": {
+      "run_id": "run_e98bebc037494bd39352",
+      "review_id": "art_941f2142bf9c4bbfa5fc",
+      "review_revision": 2
+    },
+    "commission": {
+      "run_id": "run_b67ff492aa9e45e5b530",
+      "review_id": "art_749f97b97d0c4e7893e9",
+      "review_revision": 2
+    },
+    "forecast": {
+      "run_id": "run_bcbd8f2417cb438b8334",
+      "review_id": "art_2e91cd07f66d40ad93bb",
+      "review_revision": 2
+    },
+    "conflict": {
+      "run_id": "run_7dfe540f8ba740258212",
+      "review_id": "art_e2bdff50f5e74ab281aa",
+      "review_revision": 2
+    },
+    "no_show": {
+      "run_id": "run_a25bdcd563ee43d89eb5",
+      "review_id": "art_b69f6a49abce4918ab00",
+      "review_revision": 2
+    },
+    "booking": {
+      "run_id": "run_e9967930c9a34ac19a89",
+      "review_id": "art_328d16334bdb4dbead1b",
+      "review_revision": 2
+    },
+    "weekly": {
+      "run_id": "run_6fa383be36d14ec28993",
+      "review_id": "art_4782cfc56a7d41e4bc79",
+      "review_revision": 2
+    },
+    "scheduling": {
+      "run_id": "run_7ed1892f72a44854a828",
+      "review_id": "art_2c0f9d927c694d1993af",
+      "review_revision": 2
+    }
+  },
+  "scope": "nine exact synthetic current-DA actions plus actual main-Skill handover and event; no customer outcome or comprehensive quality claim",
+  "current_public_framework_qualification_verified": true
+}

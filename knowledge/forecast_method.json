@@ -1,0 +1,40 @@
+{
+  "key": "forecast_method",
+  "title": "星期均值预测与经验区间解释",
+  "kind": "method",
+  "supply": "source_supported",
+  "consumers": [
+    "d7"
+  ],
+  "content_requirements": [
+    "从d7保留星期均值、趋势系数缺省+3%、7天输出、少于7天拒绝、±15%经验区间及节假日标注，不将经验带称统计置信区间；示例数值需独立复算。"
+  ],
+  "evidence": {
+    "source_key": "d7",
+    "quote": "区间±15%是经验取值而非统计置信区间"
+  },
+  "id": "appointment-scheduler-zh:knowledge:forecast_method",
+  "normalized_kind": "method",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "星期均值预测与经验区间解释",
+    "kind": "method",
+    "actual_source_context": [
+      "1. 样本仅4周，星期均值的波动估计偏粗，区间±15%是经验取值而非统计置信区间，置信度中等。\n2. 10月1日起进入国庆假期，探亲/出行可能使实际到店明显偏离常态周节奏，本预测未包含节假日效应。\n3. 天气、技师请假、平台流量波动等因素未纳入模型，任一因素出现都可能使实际值超出区间。"
+    ],
+    "required_business_fields": [
+      "从d7保留星期均值、趋势系数缺省+3%、7天输出、少于7天拒绝、±15%经验区间及节假日标注，不将经验带称统计置信区间；示例数值需独立复算。"
+    ],
+    "consumers": [
+      "d7"
+    ],
+    "supply": "source_supported",
+    "epistemic_state": "source_method_pending_applicability_review",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

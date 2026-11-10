@@ -1,0 +1,27 @@
+{
+  "schema_version": "typed-asset-1.0",
+  "asset_type": "workflow",
+  "id": "appointment-scheduler-zh-notification-source-window",
+  "version": "1.0.1",
+  "source_run_id": "run_afbfedd629214b04b7b3",
+  "production_target": "deepagents",
+  "target_binding_sha256": "d580312649b375f2592b3ccb4510050ebf3af36b480be7d0d619ec201f770f4c",
+  "definition_sha256": "c7f4c7102b557e6eb4f188ea5a81284716bb7451310abe1a3d92d157293af1c2",
+  "required_resources": [
+    {
+      "type": "tool",
+      "id": "appointment-notify-source-window-v2",
+      "version": "51c2c5444a5228ba6299b3cd9ea27d2c8c5044e81ded597309d148a5143f5285",
+      "permissions": [
+        "module.execute"
+      ],
+      "side_effect": "local_write",
+      "native_agent": false,
+      "node_id": "execute"
+    }
+  ],
+  "source_set_sha256": "e0d6ef359f2aa55fbdf7f430996b60aaaa49ce33f48317ed16a16ec332376656",
+  "dependency_snapshot_sha256": "699f4f2dc70c92f606c35370483fcd4fde01acd509d03f7999d45ec389317767",
+  "execution_backend": "existing_audited_WSL_bubblewrap_offline_libraries",
+  "executable_source": true
+}

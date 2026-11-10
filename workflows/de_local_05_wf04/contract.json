@@ -1,0 +1,35 @@
+{
+  "id": "appointment-scheduler-zh:workflow:de_local_05_wf04",
+  "original_id": "de_local_05_wf04",
+  "version": "1.0.0",
+  "purpose": "保留每日两次风险评分、提前确认及候补轮转工作流，工具计算风险，通知技能生成触达排期。",
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "workflows/no-show-predict-backfill-flow/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "4f9e0e370edf961dc4c49c27029a0a1604d65bd5d16f0a880c2d8d08e50d92ac"
+  },
+  "source_text_sha256": "4f9e0e370edf961dc4c49c27029a0a1604d65bd5d16f0a880c2d8d08e50d92ac",
+  "production_form": "combination",
+  "conditions": [
+    "绑定d9完整原文；原评分公式不能作为已校准概率，定金等缺省处理、候补排序与状态回执需补齐。",
+    "自动通知描述不授予发送权限；仍需老板确认、前台执行，高风险标签不向客户披露。"
+  ],
+  "acceptance": [
+    "保留全部原评分因子、上限与分层阈值，高风险前2小时、中风险前30分钟、静默及每日2条约束；一空位一次仅通知一位候补，30分钟未确认再顺延；风险表、图和JSON待授权实测。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:risk_method",
+    "appointment-scheduler-zh:knowledge:history_config",
+    "appointment-scheduler-zh:knowledge:booking_config",
+    "appointment-scheduler-zh:knowledge:contact_config",
+    "appointment-scheduler-zh:knowledge:notify_method"
+  ],
+  "runtime_binding": "pending_actual_production",
+  "content_acceptance": "pending_actual_consumer_and_original_review"
+}

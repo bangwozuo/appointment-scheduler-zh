@@ -1,0 +1,32 @@
+{
+  "id": "appointment-scheduler-zh:skill:commission-calc-assist",
+  "original_id": "commission-calc-assist",
+  "version": "1.0.0",
+  "purpose": "独立保留提成辅助能力：参数与核销记录进入确定性计算工具，技能解释制度、缺参和复核点，不并入排班或工资审批。",
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "skills/commission-calc-assist/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "b3de98a0a4c588e6a5894c93370990a23079bc95239b0419fd4de6286c5d6e70"
+  },
+  "source_text_sha256": "b3de98a0a4c588e6a5894c93370990a23079bc95239b0419fd4de6286c5d6e70",
+  "production_form": "combination",
+  "conditions": [
+    "绑定d5完整原文；脚本正文、运行依赖和执行凭据未提供，不能以模型计算替代或宣称已生成文件。",
+    "费率示例不是客户制度；财务或店长复核后才可由授权人员进入工资流程。"
+  ],
+  "acceptance": [
+    "覆盖项目计提、渠道扣减、储值卡提成、两位小数及各类费率±1个百分点敏感性；保留result、breakdown、assumption与三sheet表、构成图、JSON产物义务。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:commission_method",
+    "appointment-scheduler-zh:knowledge:commission_config"
+  ],
+  "runtime_binding": "pending_actual_production",
+  "content_acceptance": "pending_actual_consumer_and_original_review"
+}

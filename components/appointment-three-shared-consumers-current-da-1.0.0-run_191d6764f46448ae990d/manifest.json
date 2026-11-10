@@ -1,0 +1,27 @@
+{
+  "schema_version": "typed-asset-1.0",
+  "asset_type": "workflow",
+  "id": "appointment-three-shared-consumers-current-da",
+  "version": "1.0.0",
+  "source_run_id": "run_191d6764f46448ae990d",
+  "production_target": "deepagents",
+  "target_binding_sha256": "1f80c55285ccf542d1f51b7d22e7763eba6a6d7df897e7e975526586d9887b3e",
+  "definition_sha256": "1411b5d8029fb2b31eb746fe43e10e131a2b6c826cc59dfc1851ea9742e00781",
+  "required_resources": [
+    {
+      "type": "tool",
+      "id": "appointment-current-da-three-source-consumers-191",
+      "version": "ebfe6dcee93c59755b359c42dd4fb9449c94ee4f02ff2bbc30d0ecca2fdbd70a",
+      "permissions": [
+        "module.execute"
+      ],
+      "side_effect": "local_write",
+      "native_agent": false,
+      "node_id": "execute"
+    }
+  ],
+  "dependency_snapshot_sha256": "699f4f2dc70c92f606c35370483fcd4fde01acd509d03f7999d45ec389317767",
+  "source_set_sha256": "e0d6ef359f2aa55fbdf7f430996b60aaaa49ce33f48317ed16a16ec332376656",
+  "executable_source": true,
+  "public_source_modified": false
+}

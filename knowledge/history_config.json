@@ -1,0 +1,46 @@
+{
+  "key": "history_config",
+  "title": "门店需求爽约与容量历史",
+  "kind": "template",
+  "supply": "customer_configuration",
+  "consumers": [
+    "d7",
+    "d9",
+    "d11"
+  ],
+  "content_requirements": [
+    "由本门店授权导出带日期的实际核销序列、取消爽约口径及统计、预付和指名特征，上周分时人次、工作日周末容量及周趋势。",
+    "记录时间范围、缺失异常、口径版本、营销节假日事件与来源；不要求机械凑180天，也不把原示例视为客户历史。"
+  ],
+  "evidence": {
+    "source_key": "d11",
+    "quote": "提供上周分时段到店人次、时段容量、周趋势与触达约束"
+  },
+  "id": "appointment-scheduler-zh:knowledge:history_config",
+  "normalized_kind": "template",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "门店需求爽约与容量历史",
+    "kind": "template",
+    "actual_source_context": [
+      "1. 把 `prompt.txt` 全文粘贴为系统提示词\n2. 提供上周分时段到店人次、时段容量、周趋势与触达约束\n3. 按 S1→S2→S3→S4 得到周报与触达排期；上座率用下方脚本实测"
+    ],
+    "required_business_fields": [
+      "由本门店授权导出带日期的实际核销序列、取消爽约口径及统计、预付和指名特征，上周分时人次、工作日周末容量及周趋势。",
+      "记录时间范围、缺失异常、口径版本、营销节假日事件与来源；不要求机械凑180天，也不把原示例视为客户历史。"
+    ],
+    "consumers": [
+      "d7",
+      "d9",
+      "d11"
+    ],
+    "supply": "customer_configuration",
+    "epistemic_state": "source_bound_conditional_template",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

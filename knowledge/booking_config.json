@@ -1,0 +1,48 @@
+{
+  "key": "booking_config",
+  "title": "预约快照及候补状态台账",
+  "kind": "template",
+  "supply": "customer_configuration",
+  "consumers": [
+    "d8",
+    "d9",
+    "d10",
+    "d12"
+  ],
+  "content_requirements": [
+    "由本客户通过授权导出或官方只读接口提供请求文本、订单ID、渠道、提交时间、项目时长、指名、期望时段、已有占用、确认取消状态。",
+    "补充预付状态、候补可服务时段与项目、轮转顺序、通知和30分钟回执时间；明确去重键与快照时点。"
+  ],
+  "evidence": {
+    "source_key": "d9",
+    "quote": "提供历史爽约统计、当日待执行预约、候补名单与触达约束"
+  },
+  "id": "appointment-scheduler-zh:knowledge:booking_config",
+  "normalized_kind": "template",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "预约快照及候补状态台账",
+    "kind": "template",
+    "actual_source_context": [
+      "1. 把 `prompt.txt` 全文粘贴为系统提示词\n2. 提供历史爽约统计、当日待执行预约、候补名单与触达约束\n3. 按 S1→S2→S3 得到风险清单与补位排期；风险分用下方脚本实测"
+    ],
+    "required_business_fields": [
+      "由本客户通过授权导出或官方只读接口提供请求文本、订单ID、渠道、提交时间、项目时长、指名、期望时段、已有占用、确认取消状态。",
+      "补充预付状态、候补可服务时段与项目、轮转顺序、通知和30分钟回执时间；明确去重键与快照时点。"
+    ],
+    "consumers": [
+      "d8",
+      "d9",
+      "d10",
+      "d12"
+    ],
+    "supply": "customer_configuration",
+    "epistemic_state": "source_bound_conditional_template",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

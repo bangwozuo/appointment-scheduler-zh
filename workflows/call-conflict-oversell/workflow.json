@@ -1,0 +1,15 @@
+{
+  "id": "workflow-call-conflict-oversell",
+  "name": "冲突核对",
+  "version": "0.3.0-rc.1",
+  "kind": "workflow_call",
+  "employee_id": "employee-appointment-scheduler-zh",
+  "action": "conflict",
+  "source_asset_id": "appointment-scheduler-zh:workflow:de_local_05_wf03",
+  "native_employee_workflow": {
+    "id": "appointment-whole-current-da-sop",
+    "version": 2,
+    "sha256": "5b25aff800ba5c7441899d14f3afd32441ba8188fb75c0a858c90beeda301f46"
+  },
+  "host_creates_second_checkpoint": false
+}

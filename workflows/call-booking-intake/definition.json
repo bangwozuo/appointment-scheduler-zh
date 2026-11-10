@@ -1,0 +1,173 @@
+{
+  "id": "skill-call-booking-intake",
+  "name": "预约受理",
+  "version": "0.3.0-rc.1",
+  "kind": "workflow_call",
+  "purpose": "保留微信或小程序请求到可写单确认档期的受理工作流，解析、确定性匹配、客户确认分阶段输出。",
+  "conditions": [
+    "绑定d10完整原文；项目、时长、指名、期望时段齐备并有真实价目与资源快照；缺项终止。",
+    "脚本确定性排位不可降级为口算；写单需客户确认和前台复核，本分析不写单。"
+  ],
+  "acceptance": [
+    "核对价目、班次、已有占用含15分钟缓冲、房型、5分钟粒度最早档期与闭店前60分钟末单；保留受理确认单xlsx和JSON，未确认不通知技师。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:schedule_method",
+    "appointment-scheduler-zh:knowledge:resource_config",
+    "appointment-scheduler-zh:knowledge:booking_config"
+  ],
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "workflows/online-booking-intake-flow/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "bcbb48c24bd26bad6e1fc80f4013af0c9a6bd9b962d95a21d2a0ea2003cbcb21"
+  },
+  "original_contract": {
+    "id": "appointment-scheduler-zh:workflow:de_local_05_wf01",
+    "original_id": "de_local_05_wf01",
+    "version": "1.0.0",
+    "purpose": "保留微信或小程序请求到可写单确认档期的受理工作流，解析、确定性匹配、客户确认分阶段输出。",
+    "source": {
+      "repository": "bangwozuo/appointment-scheduler-zh",
+      "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+      "path": "workflows/online-booking-intake-flow/SKILL.md",
+      "source_original": {
+        "id": "art_e067a1ba8c3e44009e13",
+        "revision": 1,
+        "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+      },
+      "content_sha256": "bcbb48c24bd26bad6e1fc80f4013af0c9a6bd9b962d95a21d2a0ea2003cbcb21"
+    },
+    "source_text_sha256": "bcbb48c24bd26bad6e1fc80f4013af0c9a6bd9b962d95a21d2a0ea2003cbcb21",
+    "production_form": "combination",
+    "conditions": [
+      "绑定d10完整原文；项目、时长、指名、期望时段齐备并有真实价目与资源快照；缺项终止。",
+      "脚本确定性排位不可降级为口算；写单需客户确认和前台复核，本分析不写单。"
+    ],
+    "acceptance": [
+      "核对价目、班次、已有占用含15分钟缓冲、房型、5分钟粒度最早档期与闭店前60分钟末单；保留受理确认单xlsx和JSON，未确认不通知技师。"
+    ],
+    "knowledge_ids": [
+      "appointment-scheduler-zh:knowledge:schedule_method",
+      "appointment-scheduler-zh:knowledge:resource_config",
+      "appointment-scheduler-zh:knowledge:booking_config"
+    ],
+    "runtime_binding": "pending_actual_production",
+    "content_acceptance": "pending_actual_consumer_and_original_review"
+  },
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "operation": {
+        "const": "booking"
+      },
+      "data": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "operation",
+      "data"
+    ],
+    "additionalProperties": false
+  },
+  "output_schema": {
+    "type": "object",
+    "required": [
+      "status",
+      "staff_id",
+      "operation",
+      "data_origin",
+      "files",
+      "knowledge_sources",
+      "knowledge_governance"
+    ],
+    "properties": {
+      "status": {
+        "enum": [
+          "draft",
+          "needs_input"
+        ]
+      },
+      "staff_id": {
+        "const": "appointment-scheduler-zh"
+      },
+      "operation": {
+        "enum": [
+          "smart",
+          "notify",
+          "commission",
+          "forecast",
+          "conflict",
+          "no_show",
+          "booking",
+          "weekly",
+          "scheduling"
+        ]
+      },
+      "data_origin": {
+        "const": "SYNTHETIC"
+      },
+      "files": {
+        "type": "array"
+      },
+      "knowledge_sources": {
+        "type": "array"
+      },
+      "knowledge_governance": {
+        "type": "array"
+      }
+    }
+  },
+  "execution": {
+    "type": "installed-native-workflow",
+    "operation": "booking",
+    "service_required": true,
+    "offline_execution_claimed": false,
+    "checkpoint_authority": "existing WorkflowService",
+    "model_required": false
+  },
+  "current_binding": {
+    "source_run_id": "run_0b88b3c639514380a074",
+    "installation_id": "ins_e57d7f6c4cb4dc07a756350feb110f99",
+    "manifest_sha256": "e57d7f6c4cb4dc07a756350feb110f9966f80eaa98fc215ff2e13cccf3d0bfe0",
+    "same_original_business_proof": {
+      "operation_id": "appointment-191-integrated-booking-20261110",
+      "run_id": "run_8e21519a4d93475496e1",
+      "review_id": "art_e869eb12d7454a35be2c",
+      "review_revision": 2
+    },
+    "original_source_scope_only": true,
+    "public_framework_qualification_inferred": false
+  },
+  "distribution": {
+    "path": "workflows/call-booking-intake",
+    "client_script": "scripts/product.py",
+    "required_files": [
+      "SKILL.md",
+      "definition.json",
+      "native-schema.json",
+      "prompt.txt",
+      "scripts/product.py",
+      "references/connection.example.json",
+      "LICENSE",
+      "NOTICE",
+      "workflow.json"
+    ]
+  },
+  "current_runtime_binding": {
+    "source_run_id": "run_105fdebe57f34f7cacab",
+    "installation_id": "ins_4910235e40143b47fd767dd34d922df6",
+    "operation": "booking",
+    "current_DA_original": {
+      "run_id": "run_e9967930c9a34ac19a89",
+      "review_id": "art_328d16334bdb4dbead1b",
+      "review_revision": 2
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "appointment-scheduler-zh:workflow:de_local_05_wf02",
+  "original_id": "de_local_05_wf02",
+  "version": "1.0.0",
+  "purpose": "保留每日6:30跨渠道去重、确定性排班、负荷均衡建议和店长确认下发工作流。",
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "workflows/staff-room-scheduling-flow/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "1abdf914d0fac77900e6428d204dc8a6fe3c1bc905e346eb6ebbcf3b19207f6f"
+  },
+  "source_text_sha256": "1abdf914d0fac77900e6428d204dc8a6fe3c1bc905e346eb6ebbcf3b19207f6f",
+  "production_form": "combination",
+  "conditions": [
+    "绑定d12完整原文；排位和利用率以脚本为准，去重键与渠道增量同步待补；未经店长确认不得下发或承诺改派。"
+  ],
+  "acceptance": [
+    "8单以内全部排定或逐单明确未排原因；校验指名与时段优先、午休培训、缓冲和项目房型，输出利用率与负荷状态；保留当日排班表、负荷图、JSON，仅店长与当事技师可见相应信息。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:schedule_method",
+    "appointment-scheduler-zh:knowledge:resource_config",
+    "appointment-scheduler-zh:knowledge:booking_config"
+  ],
+  "runtime_binding": "pending_actual_production",
+  "content_acceptance": "pending_actual_consumer_and_original_review"
+}

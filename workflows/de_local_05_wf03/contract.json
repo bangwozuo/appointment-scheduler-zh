@@ -1,0 +1,33 @@
+{
+  "id": "appointment-scheduler-zh:workflow:de_local_05_wf03",
+  "original_id": "de_local_05_wf03",
+  "version": "1.0.0",
+  "purpose": "保留新预约写入事件后的实时检测工作流及确定性扫描工具，输出冲突报告与经复检改派候选，不执行改派。",
+  "source": {
+    "repository": "bangwozuo/appointment-scheduler-zh",
+    "commit": "4fd23ca30d0bfa86f06968f28c4bd04765a7dcf9",
+    "path": "workflows/conflict-oversell-detect-flow/SKILL.md",
+    "source_original": {
+      "id": "art_e067a1ba8c3e44009e13",
+      "revision": 1,
+      "sha256": "824ad51f132a3a30699ec7a56bc20eca58d616ea6457e321be54b05c689f14fd"
+    },
+    "content_sha256": "a2075cbe5aa4319d902651c445e96089e9d8154dedb83441aee458fa1bb8a692"
+  },
+  "source_text_sha256": "a2075cbe5aa4319d902651c445e96089e9d8154dedb83441aee458fa1bb8a692",
+  "production_form": "combination",
+  "conditions": [
+    "绑定d8完整原文；30秒内完成仍为必需目标，事件接入、时延凭据及脚本未提供。",
+    "执行改派须老板与客户双重确认；赔付由店长决定。"
+  ],
+  "acceptance": [
+    "按最早期望时刻预落位，覆盖双订含缓冲、房型、班次午休培训、末单四类；每处给至少一条零冲突候选或明确需改期；保留报告xlsx、JSON及通知下游接口。"
+  ],
+  "knowledge_ids": [
+    "appointment-scheduler-zh:knowledge:schedule_method",
+    "appointment-scheduler-zh:knowledge:resource_config",
+    "appointment-scheduler-zh:knowledge:booking_config"
+  ],
+  "runtime_binding": "pending_actual_production",
+  "content_acceptance": "pending_actual_consumer_and_original_review"
+}

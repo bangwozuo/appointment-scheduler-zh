@@ -1,0 +1,1 @@
+{"id": "appointment-scheduler-zh-two-source-skills", "version": "1.0.0", "entrypoint": "generated_agent.domain:execute", "kind": "source-derived-data-only-adapter", "external_writes": false}

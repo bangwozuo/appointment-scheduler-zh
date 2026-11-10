@@ -1,0 +1,27 @@
+{
+  "schema_version": "typed-asset-1.0",
+  "asset_type": "workflow",
+  "id": "appointment-scheduler-zh-waitlist-receipts",
+  "version": "1.0.0",
+  "source_run_id": "run_ccc5e67634764972b551",
+  "production_target": "deepagents",
+  "target_binding_sha256": "a65359b7e5ea085d1cc93625275b0f49a6dfffd9b4cbbb23e589ace1c9775dc3",
+  "definition_sha256": "8360c4dbd0dcdbe7ed3052656e3f699a4f194d98632256c209a4e9a20a0118cf",
+  "required_resources": [
+    {
+      "type": "tool",
+      "id": "appointment-waitlist-receipts-191",
+      "version": "77f97012fa131977b309cdacd0ee94eb973ca6b8ed68b9086eb26817d7eda8fe",
+      "permissions": [
+        "module.execute"
+      ],
+      "side_effect": "local_write",
+      "native_agent": false,
+      "node_id": "execute"
+    }
+  ],
+  "source_set_sha256": "e0d6ef359f2aa55fbdf7f430996b60aaaa49ce33f48317ed16a16ec332376656",
+  "dependency_snapshot_sha256": "699f4f2dc70c92f606c35370483fcd4fde01acd509d03f7999d45ec389317767",
+  "execution_backend": "existing_audited_WSL_bubblewrap_offline_libraries",
+  "executable_source": true
+}

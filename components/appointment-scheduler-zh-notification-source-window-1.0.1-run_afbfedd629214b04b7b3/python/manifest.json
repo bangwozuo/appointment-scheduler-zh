@@ -1,0 +1,1 @@
+{"id": "appointment-scheduler-zh-notification-source-window", "version": "1.0.1", "entrypoint": "generated_agent.domain:execute", "kind": "source-derived-data-only-adapter", "external_writes": false}

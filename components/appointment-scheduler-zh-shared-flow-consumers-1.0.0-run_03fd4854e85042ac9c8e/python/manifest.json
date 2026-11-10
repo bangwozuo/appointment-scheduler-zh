@@ -1,0 +1,1 @@
+{"id": "appointment-scheduler-zh-shared-flow-consumers", "version": "1.0.0", "entrypoint": "generated_agent.domain:execute", "kind": "source-derived-shared-consumer"}

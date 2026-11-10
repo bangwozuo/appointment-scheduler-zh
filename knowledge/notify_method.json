@@ -1,0 +1,44 @@
+{
+  "key": "notify_method",
+  "title": "提醒时机与触达排期规则",
+  "kind": "specification",
+  "supply": "source_supported",
+  "consumers": [
+    "d4",
+    "d9",
+    "d11"
+  ],
+  "content_requirements": [
+    "从d4、d9、d11保留各提醒时点、静默顺延、每日频控、渠道优先、改期取消入口、候补轮转和审批执行分工；跨流程共享计数而非各自计数。"
+  ],
+  "evidence": {
+    "source_key": "d4",
+    "quote": "本技能不直接发送，全部文案经老板确认后由前台人工执行。"
+  },
+  "id": "appointment-scheduler-zh:knowledge:notify_method",
+  "normalized_kind": "specification",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "提醒时机与触达排期规则",
+    "kind": "specification",
+    "actual_source_context": [
+      "微信/短信提醒触达：把待发送的提醒触达项排成可执行的发送排期（触发时刻精确到\n分钟：次日预约提醒前一天 15:00-16:00、到店前 30 分钟提醒、高风险客户前 2 小时二次\n确认；夜间静默 21:30-09:00 顺延；同一客户每日 ≤ 2 条）。文案草稿含改期/取消入口；\n本技能不直接发送，全部文案经老板确认后由前台人工执行。"
+    ],
+    "required_business_fields": [
+      "从d4、d9、d11保留各提醒时点、静默顺延、每日频控、渠道优先、改期取消入口、候补轮转和审批执行分工；跨流程共享计数而非各自计数。"
+    ],
+    "consumers": [
+      "d4",
+      "d9",
+      "d11"
+    ],
+    "supply": "source_supported",
+    "epistemic_state": "source_method_pending_applicability_review",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}

@@ -1,0 +1,1 @@
+{"id": "appointment-scheduler-zh-waitlist-receipts", "version": "1.0.0", "entrypoint": "generated_agent.domain:execute", "kind": "receipt-driven-state-transition"}

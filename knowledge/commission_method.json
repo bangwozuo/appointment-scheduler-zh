@@ -1,0 +1,40 @@
+{
+  "key": "commission_method",
+  "title": "提成拆解与敏感性计算口径",
+  "kind": "method",
+  "supply": "source_supported",
+  "consumers": [
+    "d5"
+  ],
+  "content_requirements": [
+    "从d5保留项目收入乘比例、渠道收入扣点、卡面值提成、两位小数、每类费率±1个百分点影响及实付基数与退卡追回复核点；数值由待核验脚本完成。"
+  ],
+  "evidence": {
+    "source_key": "d5",
+    "quote": "脚本做逐项计提、渠道扣点、储值卡提成、敏感性分析与产物落盘；"
+  },
+  "id": "appointment-scheduler-zh:knowledge:commission_method",
+  "normalized_kind": "method",
+  "customer_facts_supplied": false,
+  "content_acceptance": "pending_source_and_task_review",
+  "version": "1.0.0",
+  "content": {
+    "title": "提成拆解与敏感性计算口径",
+    "kind": "method",
+    "actual_source_context": [
+      "**分工**：脚本做逐项计提、渠道扣点、储值卡提成、敏感性分析与产物落盘；\n模型做制度口径解释、缺参清单与人工复核提示。数值一律以脚本输出为准。"
+    ],
+    "required_business_fields": [
+      "从d5保留项目收入乘比例、渠道收入扣点、卡面值提成、两位小数、每类费率±1个百分点影响及实付基数与退卡追回复核点；数值由待核验脚本完成。"
+    ],
+    "consumers": [
+      "d5"
+    ],
+    "supply": "source_supported",
+    "epistemic_state": "source_method_pending_applicability_review",
+    "customer_facts": null,
+    "simulation_is_customer_fact": false
+  },
+  "source_excerpt_not_complete_knowledge_approval": true,
+  "runtime_binding": "pending_real_knowledge_production"
+}
